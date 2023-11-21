@@ -71,7 +71,7 @@ ex) feature/read-product
 <br/><br/>
 
 ## ⚙️ ERD
-<img src="https://github.com/DO-SOPT-CDS-APP-7/Kurly-Server/assets/75441684/abafe7ef-43fe-411d-a6a1-b07232608c2e" width="400">
+<img src="https://github.com/DO-SOPT-CDS-APP-7/Kurly-Server/assets/115079024/53e12b6b-e0c9-4b79-a8c5-fd6ff9908859)" width="1000">
 <br/><br/>
 
 #  💻  Server 
