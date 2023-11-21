@@ -1,7 +1,5 @@
 # ✅  Git convention
 
----
-
 ### ✔️ Commit Convention
 
 - Feature : 새로운 기능 추가
@@ -72,6 +70,14 @@ ex) feature/read-product
 
 <br/><br/>
 
-## ✅ ERD
+# ✅ ERD
 
+
+<br/><br/>
+
+#  💻  Server 
+|<img src="https://github.com/WOK-AT/WOKAT-SERVER/assets/75441684/a3503251-18b3-4f3e-9982-3cd2faab850f" width="200">| <img src="" width="200"> |
+|:------:|:-----:|
+|[김다현](https://github.com/dahyunnee)(Server)|[이혜연](https://github.com/hyeyeonnnnn)(Server)|
+<br>
 ---
