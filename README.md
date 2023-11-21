@@ -1,10 +1,8 @@
 # Kurly-Server
 
-# ✅  Git convention
+# 🔥  Git convention
 
----
-
-### ✔️ Commit Convention
+### ✅ Commit Convention
 
 - Feature : 새로운 기능 추가
 - Fix : 버그 수정사항
@@ -22,7 +20,7 @@ ex) [Feature] user API 구현
 
 <br/><br/>
 
-### ✔️ Branch Convention
+### ✅ Branch Convention
 
 - [feature] : 기능 추가
 - [fix] : 에러 수정, 버그 수정
@@ -48,9 +46,7 @@ ex) feature/read-product
 
 <br/><br/>
 
-# ✅ Code Convention
-
----
+# 🚀 Code Convention
 
 ### DB
 
@@ -74,6 +70,13 @@ ex) feature/read-product
 
 <br/><br/>
 
-## ✅ ERD
+## ⚙️ ERD
+<img src="https://github.com/DO-SOPT-CDS-APP-7/Kurly-Server/assets/75441684/abafe7ef-43fe-411d-a6a1-b07232608c2e" width="400">
+<br/><br/>
 
+#  💻  Server 
+|<img src="https://github.com/WOK-AT/WOKAT-SERVER/assets/75441684/a3503251-18b3-4f3e-9982-3cd2faab850f" width="200">| <img src="" width="200"> |
+|:------:|:-----:|
+|[김다현](https://github.com/dahyunnee)(Server)|[이혜연](https://github.com/hyeyeonnnnn)(Server)|
+<br>
 ---
