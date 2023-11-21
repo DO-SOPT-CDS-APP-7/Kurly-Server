@@ -75,7 +75,7 @@ ex) feature/read-product
 <br/><br/>
 
 #  💻  Server 
-|<img src="https://github.com/WOK-AT/WOKAT-SERVER/assets/75441684/a3503251-18b3-4f3e-9982-3cd2faab850f" width="200">| <img src="" width="200"> |
+|<img src="https://github.com/WOK-AT/WOKAT-SERVER/assets/75441684/a3503251-18b3-4f3e-9982-3cd2faab850f" width="200">| <img src="https://github.com/DO-SOPT-CDS-APP-7/Kurly-Server/assets/115079024/bb7298fe-9a03-49d9-9be8-578ae8add3e5" width="200"> |
 |:------:|:-----:|
 |[김다현](https://github.com/dahyunnee)(Server)|[이혜연](https://github.com/hyeyeonnnnn)(Server)|
 <br>
