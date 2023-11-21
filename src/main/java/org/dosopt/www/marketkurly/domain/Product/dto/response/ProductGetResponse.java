@@ -8,7 +8,7 @@ import java.text.DecimalFormat;
 
 public record ProductGetResponse (
       @Schema(description = "배송")
-      DeliveryType deliveryType,
+      String deliveryType,
       @Schema(description = "상품명")
       String productName,
       @Schema(description = "할인율")
@@ -24,7 +24,7 @@ public record ProductGetResponse (
 ) {
    public static ProductGetResponse of (Product product) {
       return new ProductGetResponse (
-            product.getDeliveryType(),
+            product.getDeliveryType().getDelivery(),
             product.getProductName(),
             product.getDiscountRate(),
             product.getPrice(),
