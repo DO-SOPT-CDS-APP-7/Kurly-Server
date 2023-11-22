@@ -28,10 +28,10 @@ public class ProductRepositoryImpl implements ProductCustomRepository {
    public List<Product> searchByCategory(Category category, Pageable pageable) {
       return jpaQueryFactory
             .selectFrom(product)
-            .where(product.category.categoryType.eq(category.getCategoryType()))
+            .where(product.subCategory.category.categoryType.eq(category.getCategoryType()))
             .orderBy(product.updatedAt.desc())
             .offset(pageable.getOffset())
-            .limit(pageable.getPageSize())
+            .limit(pageable.getPageSize()+1)
             .fetch();
    }
 }
