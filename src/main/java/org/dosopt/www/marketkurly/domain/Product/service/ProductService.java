@@ -5,6 +5,7 @@ import org.dosopt.www.marketkurly.domain.Product.dto.response.ProductGetResponse
 import org.dosopt.www.marketkurly.domain.Product.dto.response.SimilarProductGetResponse;
 import org.dosopt.www.marketkurly.domain.Product.entity.Category;
 import org.dosopt.www.marketkurly.domain.Product.entity.Product;
+import org.dosopt.www.marketkurly.domain.Product.entity.SubCategory;
 import org.dosopt.www.marketkurly.domain.Product.repository.ProductRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -27,9 +28,19 @@ public class ProductService {
    }
 
    public List<SimilarProductGetResponse> getRelatedById(Long id, Pageable pageable) {
-      Category productCategory = productJpaRepository.findByIdOrElseThrow(id).getCategory();
+      Category productCategory = productJpaRepository.findByIdOrElseThrow(id).getSubCategory().getCategory();
       return productJpaRepository
                .searchByCategory(productCategory, pageable)
+               .stream()
+               .filter(p -> !p.getId().equals(id))
+               .map(SimilarProductGetResponse::of)
+               .collect(Collectors.toList());
+   }
+
+   public List<SimilarProductGetResponse> getRecommendedById(Long id) {
+      SubCategory productSubCategory = productJpaRepository.findByIdOrElseThrow(id).getSubCategory();
+      return productJpaRepository
+               .searchBySubCategory(productSubCategory)
                .stream()
                .filter(p -> !p.getId().equals(id))
                .map(SimilarProductGetResponse::of)

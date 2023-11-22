@@ -52,4 +52,15 @@ public class ProductController {
                                                                                 @Parameter(hidden = true) PageRequest pageRequest) {
       return ResultResponse.of(ResultCode.GET_SIMILAR_PRODUCT_SUCCESS, productService.getRelatedById(id, pageRequest.of()));
    }
+
+   @Operation( summary = "함께 구매하면 좋은 상품 3개 조회",
+         description = "사용자가 상품을 찜한 경우, ✔️함께 구매하면 좋은 상품 3개✔️를 조회합니다.",
+         parameters = { @Parameter(name = "productId", description = "상품 ID",
+               in = ParameterIn.PATH, schema = @Schema(defaultValue = "1")) } )
+   @ApiResponses(value = { @ApiResponse(responseCode = "200", description = "성공 결과 ➡️ SimilarProductGetResponse",
+         content = @Content(schema = @Schema(implementation = SimilarProductGetResponse.class))) } )
+   @GetMapping("/{productId}/recommend")
+   public ResultResponse<List<SimilarProductGetResponse>> getRecommendedProductById(@PathVariable("productId") Long id) {
+      return ResultResponse.of(ResultCode.GET_SIMILAR_PRODUCT_SUCCESS, productService.getRecommendedById(id));
+   }
 }
