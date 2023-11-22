@@ -1,4 +1,4 @@
-package org.dosopt.www.marketkurly.global.domain;
+package org.dosopt.www.marketkurly.global.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.EntityListeners;

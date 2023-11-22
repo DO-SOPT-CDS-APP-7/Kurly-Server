@@ -22,7 +22,7 @@ public class QProduct extends EntityPathBase<Product> {
 
     public static final QProduct product = new QProduct("product");
 
-    public final org.dosopt.www.marketkurly.global.domain.QBaseEntity _super = new org.dosopt.www.marketkurly.global.domain.QBaseEntity(this);
+    public final org.dosopt.www.marketkurly.global.entity.QBaseEntity _super = new org.dosopt.www.marketkurly.global.entity.QBaseEntity(this);
 
     public final QCategory category;
 
