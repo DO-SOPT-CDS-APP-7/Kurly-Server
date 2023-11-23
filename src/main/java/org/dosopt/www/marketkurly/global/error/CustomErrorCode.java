@@ -12,7 +12,10 @@ public enum CustomErrorCode {
    PRODUCT_NOT_FOUND(HttpStatus.BAD_REQUEST, "존재하지 않는 상품입니다."),
 
    // USER
-   USER_NOT_FOUND(HttpStatus.BAD_REQUEST, "존재하지 않는 유저입니다.");
+   USER_NOT_FOUND(HttpStatus.BAD_REQUEST, "존재하지 않는 유저입니다."),
+
+   // CART
+   CART_NOT_FOUND(HttpStatus.BAD_REQUEST, "장바구니가 존재하지 않습니다.");
 
    private final HttpStatus status;
    private final String message;
