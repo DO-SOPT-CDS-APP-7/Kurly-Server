@@ -1,6 +1,8 @@
 package org.dosopt.www.marketkurly.domain.Cart.controller;
 
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.enums.ParameterIn;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
@@ -26,7 +28,9 @@ public class CartController {
     private final CartService cartService;
 
     @Operation( summary = "장바구니 추가",
-            description = "사용자가 상품을 장바구니에 추가합니다.")
+            description = "사용자가 상품을 장바구니에 추가합니다.",
+            parameters = {@Parameter(name="productId", description = "상품 ID", in = ParameterIn.HEADER, schema = @Schema(defaultValue = "1")),
+                          @Parameter(name="count", description = "상품 개수", in = ParameterIn.HEADER,  schema = @Schema(defaultValue = "1"))})
     @PostMapping
     public ResultResponse createCart(@RequestHeader(CUSTOM_AUTH_ID) Long userId,
                                            @RequestBody CartItemAddRequest request){
