@@ -49,6 +49,12 @@ public class CartService {
         }
     }
 
+    public void deleteCartItems(Long cartId){
+        CartItem cartItems = cartItemRepository.findById(cartId).orElseThrow(
+                () -> new CartException(CustomErrorCode.CART_NOT_FOUND));
+        cartItemRepository.deleteAllByCart_Id(cartId);
+    }
+
     /*QueryDsl*/
     public List<CartItemGetResponse> findCartItems(Long cartId){
         CartItem cartItems = cartItemRepository.findById(cartId).orElseThrow(

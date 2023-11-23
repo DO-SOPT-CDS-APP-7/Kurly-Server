@@ -46,4 +46,14 @@ public class CartController {
     public ResultResponse<List<CartItemGetResponse>> findCartItems(@RequestHeader(CUSTOM_AUTH_ID) Long cartId){
         return ResultResponse.of(ResultCode.GET_CARTITEMS_SUCCESS, cartService.findCartItems(cartId));
     }
+
+    @Operation( summary = "장바구니 초기화",
+            description = "사용자가 장바구니를 초기화합니다.",
+            parameters = {@Parameter(name="X-Auth-id", description = "장바구니 ID", in = ParameterIn.HEADER, schema = @Schema(defaultValue = "1"))})
+    @DeleteMapping
+    public ResponseEntity<Void> deleteCartItems(@RequestHeader(CUSTOM_AUTH_ID) Long cartId) {
+        cartService.deleteCartItems(cartId);
+        return ResponseEntity.noContent().build();
+    }
+
 }
