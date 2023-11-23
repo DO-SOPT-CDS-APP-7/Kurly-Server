@@ -51,7 +51,7 @@ public class CartService {
 
     public void deleteCartItems(Long cartId){
         CartItem cartItems = cartItemRepository.findById(cartId).orElseThrow(
-                () -> new CartException(CustomErrorCode.CART_NOT_FOUND));
+                () -> new CartException(CustomErrorCode.CARTITEM_NOT_FOUND));
         cartItemRepository.deleteAllByCart_Id(cartId);
     }
 
