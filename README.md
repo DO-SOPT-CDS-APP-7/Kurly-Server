@@ -1,6 +1,6 @@
 # Kurly-Server
 
-# 🔥  Git convention
+# 📍  Git convention
 
 ### ✅ Commit Convention
 
@@ -70,8 +70,14 @@ ex) feature/read-product
 
 <br/><br/>
 
-## ⚙️ ERD
+# 📌 ERD
 <img src="https://github.com/DO-SOPT-CDS-APP-7/Kurly-Server/assets/115079024/a73af8d5-183e-400d-b4be-2cba930c5513" width="600">
+
+<br/><br/>
+
+# ⚙️ Project Architecture
+<img width="754" alt="스크린샷 2023-11-23 오후 1 04 24" src="https://github.com/DO-SOPT-CDS-APP-7/Kurly-Server/assets/75441684/8f5981cf-b0bf-4cbd-bcb7-5b82c6fcd5a8">
+
 <br/><br/>
 
 #  💻  Server 
