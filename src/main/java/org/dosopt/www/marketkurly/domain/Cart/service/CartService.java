@@ -16,6 +16,7 @@ import org.dosopt.www.marketkurly.global.exception.domain.CartException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.text.DecimalFormat;
 import java.util.List;
 
 @Service
@@ -26,6 +27,7 @@ public class CartService {
     private final CartRepository cartRepository;
     private final CartItemRepository cartItemRepository;
     private final UserJpaRepository userJpaRepository;
+    final int freeShippingPrice = 50000;
 
     public Long addCart(CartItemAddRequest cartRequest, Long userId){
         Product product = productJpaRepository.findByIdOrElseThrow(cartRequest.getProductId());
@@ -50,14 +52,31 @@ public class CartService {
     }
 
     public void deleteCartItems(Long cartId){
-        CartItem cartItems = cartItemRepository.findById(cartId).orElseThrow(
+        CartItem cartItem = cartItemRepository.findById(cartId).orElseThrow(
                 () -> new CartException(CustomErrorCode.CARTITEM_NOT_FOUND));
         cartItemRepository.deleteAllByCart_Id(cartId);
     }
 
+    public String getFreeShippingPrice(Long cartId){
+        int totalPrice = 0;
+        int remainPrice = 0;
+        CartItem cartItem = cartItemRepository.findById(cartId).orElseThrow(
+                () -> new CartException(CustomErrorCode.CART_NOT_FOUND));
+
+        List<CartItemGetResponse> cartItems = cartItemRepository.findByCartId(cartId);
+
+        for(CartItemGetResponse item:cartItems) {
+            totalPrice += item.getCount()*item.getPrice() * (1-item.getDiscountRate()*0.01);
+        }
+
+        remainPrice = freeShippingPrice - totalPrice;
+        if(remainPrice>0) return new DecimalFormat("#,###원").format(remainPrice);
+        return "0원";
+    }
+
     /*QueryDsl*/
     public List<CartItemGetResponse> findCartItems(Long cartId){
-        CartItem cartItems = cartItemRepository.findById(cartId).orElseThrow(
+        CartItem cartItem = cartItemRepository.findById(cartId).orElseThrow(
                 () -> new CartException(CustomErrorCode.CART_NOT_FOUND));
 
         return cartItemRepository.findByCartId(cartId);

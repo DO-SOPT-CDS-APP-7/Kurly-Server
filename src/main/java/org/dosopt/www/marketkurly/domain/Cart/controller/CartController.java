@@ -30,11 +30,12 @@ public class CartController {
     @Operation( summary = "장바구니 추가",
             description = "사용자가 상품을 장바구니에 추가합니다.",
             parameters = {@Parameter(name="productId", description = "상품 ID", in = ParameterIn.DEFAULT, schema = @Schema(defaultValue = "1")),
-                          @Parameter(name="count", description = "상품 개수", in = ParameterIn.DEFAULT,  schema = @Schema(defaultValue = "1"))})
+                          @Parameter(name="count", description = "상품 개수", in = ParameterIn.DEFAULT,  schema = @Schema(defaultValue = "1")),
+                          @Parameter(name="X-Auth-id", description = "사용자 ID", in = ParameterIn.HEADER, schema = @Schema(defaultValue = "1"))})
     @PostMapping
     public ResultResponse createCart(@RequestHeader(CUSTOM_AUTH_ID) Long userId,
                                            @RequestBody CartItemAddRequest request){
-        return ResultResponse.of(ResultCode.GET_PRODUCT_SUCCESS, cartService.addCart(request, userId));
+        return ResultResponse.of(ResultCode.CREATE_CART_SUCCESS, cartService.addCart(request, userId));
     }
 
     @Operation( summary = "장바구니 조회",
@@ -54,6 +55,15 @@ public class CartController {
     public ResponseEntity<Void> deleteCartItems(@RequestHeader(CUSTOM_AUTH_ID) Long cartId) {
         cartService.deleteCartItems(cartId);
         return ResponseEntity.noContent().build();
+    }
+
+
+    @Operation( summary = "무료배송가격 조회",
+            description = "사용자가 무료배송을 하기 위해 더 구매해야 할 상품의 가격을 알려줍니다.",
+            parameters = {@Parameter(name="X-Auth-id", description = "장바구니 ID", in = ParameterIn.HEADER, schema = @Schema(defaultValue = "1"))})
+    @GetMapping("/free-shipping")
+    public ResultResponse<String> getFreeShippingPrice(@RequestHeader(CUSTOM_AUTH_ID) Long cartId){
+        return ResultResponse.of(ResultCode.GET_FREESHIPPINGPRICE_SUCCESS, cartService.getFreeShippingPrice(cartId));
     }
 
 }
