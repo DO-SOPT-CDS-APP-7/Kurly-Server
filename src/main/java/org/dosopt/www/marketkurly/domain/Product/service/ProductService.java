@@ -21,15 +21,15 @@ import java.util.stream.Collectors;
 @Transactional(readOnly = true)
 public class ProductService {
    private final Logger logger = LoggerFactory.getLogger(this.getClass());
-   private final ProductRepository productJpaRepository;
+   private final ProductRepository productRepository;
    public ProductGetResponse getById(Long id) {
-      Product product = productJpaRepository.findByIdOrElseThrow(id);
+      Product product = productRepository.findByIdOrElseThrow(id);
       return ProductGetResponse.of(product);
    }
 
    public List<SimilarProductGetResponse> getRelatedById(Long id, Pageable pageable) {
-      Category productCategory = productJpaRepository.findByIdOrElseThrow(id).getSubCategory().getCategory();
-      return productJpaRepository
+      Category productCategory = productRepository.findByIdOrElseThrow(id).getSubCategory().getCategory();
+      return productRepository
                .searchByCategory(productCategory, pageable)
                .stream()
                .filter(p -> !p.getId().equals(id))
@@ -38,8 +38,8 @@ public class ProductService {
    }
 
    public List<SimilarProductGetResponse> getRecommendedById(Long id) {
-      SubCategory productSubCategory = productJpaRepository.findByIdOrElseThrow(id).getSubCategory();
-      return productJpaRepository
+      SubCategory productSubCategory = productRepository.findByIdOrElseThrow(id).getSubCategory();
+      return productRepository
                .searchBySubCategory(productSubCategory)
                .stream()
                .filter(p -> !p.getId().equals(id))

@@ -35,10 +35,10 @@ public class ProductRepositoryImpl implements ProductCustomRepository {
    @Override
    public List<Product> searchBySubCategory(SubCategory subCategory) {
       return jpaQueryFactory
-            .selectFrom(product)
-            .where(product.subCategory.subCategoryType.eq(subCategory.getSubCategoryType()))
-            .orderBy(product.updatedAt.desc())
-            .limit(subCategoryCount + 1)
-            .fetch();
+               .selectFrom(product)
+               .where(product.subCategory.subCategoryType.eq(subCategory.getSubCategoryType()))
+               .orderBy(product.updatedAt.desc())
+               .limit(subCategoryCount + 1)
+               .fetch();
    }
 }
