@@ -60,9 +60,7 @@ public class CartService {
     public String getFreeShippingPrice(Long cartId){
         int totalPrice = 0;
         int remainPrice = 0;
-        CartItem cartItem = cartItemRepository.findById(cartId).orElseThrow(
-                () -> new CartException(CustomErrorCode.CART_NOT_FOUND));
-
+        //장바구니에 담은 상품이 없는 경우, default 값인 50000원 반환
         List<CartItemGetResponse> cartItems = cartItemRepository.findByCartId(cartId);
 
         for(CartItemGetResponse item:cartItems) {
