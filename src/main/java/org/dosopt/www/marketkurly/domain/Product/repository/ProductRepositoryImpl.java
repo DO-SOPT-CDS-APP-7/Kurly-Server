@@ -20,7 +20,7 @@ import java.util.List;
 public class ProductRepositoryImpl implements ProductCustomRepository {
    private final JPAQueryFactory jpaQueryFactory;
    private final Logger logger = LoggerFactory.getLogger(this.getClass());
-   private final int subCategoryCount = 3;
+   private static final int subCategoryCount = 3;
    @Override
    public List<Product> searchByCategory(Category category, Pageable pageable) {
       return jpaQueryFactory
