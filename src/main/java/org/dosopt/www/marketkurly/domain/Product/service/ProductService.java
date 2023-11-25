@@ -20,8 +20,10 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 @Transactional(readOnly = true)
 public class ProductService {
+
    private final Logger logger = LoggerFactory.getLogger(this.getClass());
    private final ProductRepository productRepository;
+
    public ProductGetResponse getById(Long id) {
       Product product = productRepository.findByIdOrElseThrow(id);
       return ProductGetResponse.of(product);

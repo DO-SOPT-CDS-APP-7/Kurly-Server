@@ -26,8 +26,10 @@ import java.util.List;
 @RequiredArgsConstructor
 @Tag(name = "PRODUCT cotroller", description = "상품 API입니다.")
 public class ProductController {
+
    private final Logger logger = LoggerFactory.getLogger(this.getClass());
    private final ProductService productService;
+
    @Operation( summary = "특정 상품 조회",
          description = "사용자가 ✔️특정 상품✔️을 조회합니다.",
          parameters = { @Parameter(name = "productId", description = "상품 ID (상품설명 화면에서 productId=1 값 사용)",

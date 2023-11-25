@@ -18,9 +18,11 @@ import java.util.List;
 @Repository
 @RequiredArgsConstructor
 public class ProductRepositoryImpl implements ProductCustomRepository {
+
    private final JPAQueryFactory jpaQueryFactory;
    private final Logger logger = LoggerFactory.getLogger(this.getClass());
    private static final int subCategoryCount = 3;
+
    @Override
    public List<Product> searchByCategory(Category category, Pageable pageable) {
       return jpaQueryFactory
