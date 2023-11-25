@@ -1,14 +1,8 @@
-INSERT IGNORE INTO member(ID, NICKNAME, NAME, AGE, PART, GENERATION)
+INSERT IGNORE INTO seller(id, name, created_at, updated_at)
 VALUES
-    (1, '유난', '최윤한', 20, 'SERVER', 33),
-    (2, 'DDD', '정준서', 24, 'SERVER', 33),
-    (3, '멜로니', '김해린', 26, 'PLAN', 33),
-    (4, '티벳여우', '이태희', 25, 'ANDROID', 33);
+    (null, '컬리', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 
-INSERT IGNORE INTO post(ID, TITLE, CONTENT, MEMBER_ID)
+INSERT IGNORE INTO product(id, product_name, price, imageurl, discount_rate, delivery_type, seller_id, created_at, updated_at)
 VALUES
-    (1, '안녕하세요 제목1', '안녕하세요 내용1', 1),
-    (2, '안녕하세요 제목2', '안녕하세요 내용2', 1),
-    (3, '안녕하세요 제목3', '안녕하세요 내용3', 1),
-    (4, '반갑습니다 제목4', '반갑습니다', 2),
-    (5, '안녕하세요 제목5', '안녕하세요', 3);
+    (null, '[전주 베테랑] 칼국수', 5000, 'https://insopt-seminar3.s3.ap-northeast-2.amazonaws.com/marketKurly/kurly1.png',
+    20, 'SAME_DAY', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP );

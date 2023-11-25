@@ -85,4 +85,3 @@ ex) feature/read-product
 |:------:|:-----:|
 |[김다현](https://github.com/dahyunnee)(Server)|[이혜연](https://github.com/hyeyeonnnnn)(Server)|
 <br>
----
