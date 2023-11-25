@@ -2,6 +2,10 @@ INSERT IGNORE INTO seller(id, name, created_at, updated_at)
 VALUES
     (1, '컬리', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 
+INSERT IGNORE INTO user(user_id, nickname, address)
+VALUES
+    (1, '유저1', '서울시 광진구 능동로 120 건국대학교');
+
 INSERT IGNORE INTO category(category_type) values('NOODLES');
 INSERT IGNORE INTO category(category_type) values('VEGETABLES');
 INSERT IGNORE INTO category(category_type) values('FRUITS');
