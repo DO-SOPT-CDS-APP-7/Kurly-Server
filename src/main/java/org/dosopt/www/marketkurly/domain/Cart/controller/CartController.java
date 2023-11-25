@@ -25,13 +25,13 @@ public class CartController {
     private static final String CUSTOM_AUTH_ID = "X-Auth-id";
     private final CartService cartService;
 
-    @Operation( summary = "장바구니 추가",
-            description = "사용자가 상품을 장바구니에 추가합니다.")
+    @Operation( summary = "장바구니 추가", description = "사용자가 상품을 장바구니에 추가합니다.")
+    @ApiResponses(value = { @ApiResponse(responseCode = "201", description = "장바구니 생성 성공") } )
     @PostMapping
     public ResponseEntity<Void> createCart(@RequestHeader(CUSTOM_AUTH_ID) Long userId,
                                            @RequestBody CartItemAddRequest request){
-        cartService.addCart(request, userId);
-        URI location = URI.create("/cart");
+        Long cartId = cartService.addCart(request, userId);
+        URI location = URI.create("/cart/" + cartId);
         return ResponseEntity.created(location).build();
     }
 

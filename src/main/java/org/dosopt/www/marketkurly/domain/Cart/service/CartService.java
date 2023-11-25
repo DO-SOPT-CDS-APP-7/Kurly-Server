@@ -7,7 +7,7 @@ import org.dosopt.www.marketkurly.domain.Cart.entity.CartItem;
 import org.dosopt.www.marketkurly.domain.Cart.repository.CartItemJpaRepository;
 import org.dosopt.www.marketkurly.domain.Cart.repository.CartJpaRepository;
 import org.dosopt.www.marketkurly.domain.Product.entity.Product;
-import org.dosopt.www.marketkurly.domain.Product.repository.ProductJpaRepository;
+import org.dosopt.www.marketkurly.domain.Product.repository.ProductRepository;
 import org.dosopt.www.marketkurly.domain.User.UserJpaRepository;
 import org.dosopt.www.marketkurly.domain.User.entity.User;
 import org.springframework.stereotype.Service;
@@ -17,7 +17,7 @@ import org.springframework.transaction.annotation.Transactional;
 @RequiredArgsConstructor
 @Transactional
 public class CartService {
-    private final ProductJpaRepository productJpaRepository;
+    private final ProductRepository productJpaRepository;
     private final CartJpaRepository cartJpaRepository;
     private final CartItemJpaRepository cartItemJpaRepository;
     private final UserJpaRepository userJpaRepository;
