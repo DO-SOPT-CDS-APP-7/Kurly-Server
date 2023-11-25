@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.dosopt.www.marketkurly.global.domain.BaseEntity;
+import org.dosopt.www.marketkurly.global.entity.BaseEntity;
 
 @Entity
 @Getter
