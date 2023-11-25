@@ -1,0 +1,1236 @@
+[10:52:59.788][INFO ][org.dosopt.www.marketkurly.MarketKurlyApplication.logStarting:line51] - Starting MarketKurlyApplication using Java 17.0.8.1 with PID 30287 (/Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly/build/classes/java/main started by dahyunkim in /Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly)
+[10:52:59.793][INFO ][org.dosopt.www.marketkurly.MarketKurlyApplication.logStartupProfileInfo:line644] - The following 5 profiles are active: "database", "log", "local", "local-db", "local-log"
+[10:53:01.262][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:line138] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[10:53:01.285][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:line208] - Finished Spring Data repository scanning in 16 ms. Found 0 JPA repository interfaces.
+[10:53:01.722][INFO ][org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize:line108] - Tomcat initialized with port(s): 8080 (http)
+[10:53:01.729][INFO ][org.apache.catalina.core.StandardService.log:line173] - Starting service [Tomcat]
+[10:53:01.729][INFO ][org.apache.catalina.core.StandardEngine.log:line173] - Starting Servlet engine: [Apache Tomcat/10.1.15]
+[10:53:01.783][INFO ][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:line173] - Initializing Spring embedded WebApplicationContext
+[10:53:01.783][INFO ][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext:line291] - Root WebApplicationContext: initialization completed in 1791 ms
+[10:53:01.857][INFO ][com.zaxxer.hikari.HikariDataSource.getConnection:line110] - HikariPool-1 - Starting...
+[10:53:02.135][INFO ][com.zaxxer.hikari.pool.HikariPool.checkFailFast:line565] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@67d8faec
+[10:53:02.136][INFO ][com.zaxxer.hikari.HikariDataSource.getConnection:line123] - HikariPool-1 - Start completed.
+[10:53:02.208][INFO ][org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:line31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+[10:53:02.243][INFO ][org.hibernate.Version.logVersion:line44] - HHH000412: Hibernate ORM core version 6.2.13.Final
+[10:53:02.244][INFO ][org.hibernate.cfg.Environment.<clinit>:line191] - HHH000406: Using bytecode reflection optimizer
+[10:53:02.439][INFO ][org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo.addTransformer:line87] - No LoadTimeWeaver setup: ignoring JPA class transformer
+[10:53:02.498][WARN ][org.hibernate.orm.deprecation.constructDialect:line152] - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[10:53:02.499][WARN ][org.hibernate.orm.deprecation.logSelectedDialect:line100] - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+[10:53:02.562][ERROR][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:line426] - Failed to initialize JPA EntityManagerFactory: Entity 'org.dosopt.www.marketkurly.domain.Product.entity.Product' has no identifier (every '@Entity' class must declare or inherit at least one '@Id' or '@EmbeddedId' property)
+[10:53:02.562][WARN ][org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext.refresh:line624] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Entity 'org.dosopt.www.marketkurly.domain.Product.entity.Product' has no identifier (every '@Entity' class must declare or inherit at least one '@Id' or '@EmbeddedId' property)
+[10:53:02.562][INFO ][com.zaxxer.hikari.HikariDataSource.close:line350] - HikariPool-1 - Shutdown initiated...
+[10:53:02.566][INFO ][com.zaxxer.hikari.HikariDataSource.close:line352] - HikariPool-1 - Shutdown completed.
+[10:53:02.568][INFO ][org.apache.catalina.core.StandardService.log:line173] - Stopping service [Tomcat]
+[10:53:02.578][INFO ][org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger.logMessage:line82] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[10:53:02.589][ERROR][org.springframework.boot.SpringApplication.reportFailure:line824] - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Entity 'org.dosopt.www.marketkurly.domain.Product.entity.Product' has no identifier (every '@Entity' class must declare or inherit at least one '@Id' or '@EmbeddedId' property)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1166)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:940)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:616)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:738)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:440)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at org.dosopt.www.marketkurly.MarketKurlyApplication.main(MarketKurlyApplication.java:10)
+Caused by: org.hibernate.AnnotationException: Entity 'org.dosopt.www.marketkurly.domain.Product.entity.Product' has no identifier (every '@Entity' class must declare or inherit at least one '@Id' or '@EmbeddedId' property)
+	at org.hibernate.boot.model.internal.InheritanceState.determineDefaultAccessType(InheritanceState.java:279)
+	at org.hibernate.boot.model.internal.InheritanceState.getElementsToProcess(InheritanceState.java:215)
+	at org.hibernate.boot.model.internal.InheritanceState.postProcess(InheritanceState.java:160)
+	at org.hibernate.boot.model.internal.EntityBinder.handleIdentifier(EntityBinder.java:293)
+	at org.hibernate.boot.model.internal.EntityBinder.bindEntityClass(EntityBinder.java:228)
+	at org.hibernate.boot.model.internal.AnnotationBinder.bindClass(AnnotationBinder.java:417)
+	at org.hibernate.boot.model.source.internal.annotations.AnnotationMetadataSourceProcessorImpl.processEntityHierarchies(AnnotationMetadataSourceProcessorImpl.java:255)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess$1.processEntityHierarchies(MetadataBuildingProcess.java:278)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:321)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1383)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1454)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	... 16 common frames omitted
+[15:21:53.429][INFO ][org.dosopt.www.marketkurly.MarketKurlyApplication.logStarting:line51] - Starting MarketKurlyApplication using Java 17.0.8.1 with PID 34279 (/Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly/build/classes/java/main started by dahyunkim in /Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly)
+[15:21:53.433][INFO ][org.dosopt.www.marketkurly.MarketKurlyApplication.logStartupProfileInfo:line644] - The following 5 profiles are active: "database", "log", "local", "local-db", "local-log"
+[15:21:54.354][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:line138] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[15:21:54.395][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:line208] - Finished Spring Data repository scanning in 35 ms. Found 1 JPA repository interfaces.
+[15:21:54.767][INFO ][org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize:line108] - Tomcat initialized with port(s): 8080 (http)
+[15:21:54.774][INFO ][org.apache.catalina.core.StandardService.log:line173] - Starting service [Tomcat]
+[15:21:54.774][INFO ][org.apache.catalina.core.StandardEngine.log:line173] - Starting Servlet engine: [Apache Tomcat/10.1.15]
+[15:21:54.829][INFO ][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:line173] - Initializing Spring embedded WebApplicationContext
+[15:21:54.829][INFO ][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext:line291] - Root WebApplicationContext: initialization completed in 1338 ms
+[15:21:54.896][INFO ][com.zaxxer.hikari.HikariDataSource.getConnection:line110] - HikariPool-1 - Starting...
+[15:21:55.177][INFO ][com.zaxxer.hikari.pool.HikariPool.checkFailFast:line565] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@55c1ced9
+[15:21:55.178][INFO ][com.zaxxer.hikari.HikariDataSource.getConnection:line123] - HikariPool-1 - Start completed.
+[15:21:55.248][INFO ][org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:line31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+[15:21:55.283][INFO ][org.hibernate.Version.logVersion:line44] - HHH000412: Hibernate ORM core version 6.2.13.Final
+[15:21:55.285][INFO ][org.hibernate.cfg.Environment.<clinit>:line191] - HHH000406: Using bytecode reflection optimizer
+[15:21:55.480][INFO ][org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo.addTransformer:line87] - No LoadTimeWeaver setup: ignoring JPA class transformer
+[15:21:55.536][WARN ][org.hibernate.orm.deprecation.constructDialect:line152] - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[15:21:55.537][WARN ][org.hibernate.orm.deprecation.logSelectedDialect:line100] - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+[15:21:56.141][INFO ][org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator.initiateService:line55] - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[15:21:56.176][WARN ][org.hibernate.tool.schema.internal.ExceptionHandlerLoggedImpl.handleException:line27] - GenerationTarget encountered exception accepting command : Error executing DDL "alter table product drop foreign key FKesd6fy52tk7esoo2gcls4lfe3" via JDBC [Table 'seminar.product' doesn't exist]
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table product drop foreign key FKesd6fy52tk7esoo2gcls4lfe3" via JDBC [Table 'seminar.product' doesn't exist]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94)
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:233)
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:217)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:455)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropConstraintsTablesSequences(SchemaDropperImpl.java:242)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:215)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:185)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:155)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:115)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:242)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:143)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:140)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:293)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:444)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1458)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1166)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:940)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:616)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:738)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:440)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at org.dosopt.www.marketkurly.MarketKurlyApplication.main(MarketKurlyApplication.java:10)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'seminar.product' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80)
+	... 40 common frames omitted
+[15:21:56.180][WARN ][org.hibernate.tool.schema.internal.ExceptionHandlerLoggedImpl.handleException:line27] - GenerationTarget encountered exception accepting command : Error executing DDL "alter table sub_category drop foreign key FKl65dyy5me2ypoyj8ou1hnt64e" via JDBC [Table 'seminar.sub_category' doesn't exist]
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table sub_category drop foreign key FKl65dyy5me2ypoyj8ou1hnt64e" via JDBC [Table 'seminar.sub_category' doesn't exist]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94)
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:233)
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:217)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:455)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropConstraintsTablesSequences(SchemaDropperImpl.java:242)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:215)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:185)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:155)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:115)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:242)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:143)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:140)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:293)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:444)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1458)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1166)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:940)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:616)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:738)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:440)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at org.dosopt.www.marketkurly.MarketKurlyApplication.main(MarketKurlyApplication.java:10)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'seminar.sub_category' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80)
+	... 40 common frames omitted
+[15:21:56.334][INFO ][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:line437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[15:21:56.791][WARN ][org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor:line231] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[15:21:56.814][WARN ][org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration.getOrDeducePassword:line87] - 
+
+Using generated security password: fed887ef-cb88-43c7-a14a-94d6aa33b1b7
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+[15:21:56.899][INFO ][org.springframework.security.web.DefaultSecurityFilterChain.<init>:line54] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7fba30fe, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5cbebfba, org.springframework.security.web.context.SecurityContextHolderFilter@3453f79c, org.springframework.security.web.header.HeaderWriterFilter@772589ed, org.springframework.security.web.authentication.logout.LogoutFilter@c6653e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@655b9169, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@27f4761b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@66ce4b4, org.springframework.security.web.access.ExceptionTranslationFilter@60655642, org.springframework.security.web.access.intercept.AuthorizationFilter@7b1b1784]
+[15:21:57.606][INFO ][org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start:line220] - Tomcat started on port(s): 8080 (http) with context path ''
+[15:21:57.616][INFO ][org.dosopt.www.marketkurly.MarketKurlyApplication.logStarted:line57] - Started MarketKurlyApplication in 5.375 seconds (process running for 6.417)
+[15:24:18.338][INFO ][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.destroy:line650] - Closing JPA EntityManagerFactory for persistence unit 'default'
+[15:24:18.341][INFO ][com.zaxxer.hikari.HikariDataSource.close:line350] - HikariPool-1 - Shutdown initiated...
+[15:24:18.348][INFO ][com.zaxxer.hikari.HikariDataSource.close:line352] - HikariPool-1 - Shutdown completed.
+[15:24:22.398][INFO ][org.dosopt.www.marketkurly.MarketKurlyApplication.logStarting:line51] - Starting MarketKurlyApplication using Java 17.0.8.1 with PID 35516 (/Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly/build/classes/java/main started by dahyunkim in /Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly)
+[15:24:22.401][INFO ][org.dosopt.www.marketkurly.MarketKurlyApplication.logStartupProfileInfo:line644] - The following 5 profiles are active: "database", "log", "local", "local-db", "local-log"
+[15:24:23.615][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:line138] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[15:24:23.657][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:line208] - Finished Spring Data repository scanning in 36 ms. Found 1 JPA repository interfaces.
+[15:24:24.062][INFO ][org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize:line108] - Tomcat initialized with port(s): 8080 (http)
+[15:24:24.069][INFO ][org.apache.catalina.core.StandardService.log:line173] - Starting service [Tomcat]
+[15:24:24.069][INFO ][org.apache.catalina.core.StandardEngine.log:line173] - Starting Servlet engine: [Apache Tomcat/10.1.15]
+[15:24:24.124][INFO ][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:line173] - Initializing Spring embedded WebApplicationContext
+[15:24:24.124][INFO ][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext:line291] - Root WebApplicationContext: initialization completed in 1648 ms
+[15:24:24.193][INFO ][com.zaxxer.hikari.HikariDataSource.getConnection:line110] - HikariPool-1 - Starting...
+[15:24:24.407][INFO ][com.zaxxer.hikari.pool.HikariPool.checkFailFast:line565] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5d7f8467
+[15:24:24.409][INFO ][com.zaxxer.hikari.HikariDataSource.getConnection:line123] - HikariPool-1 - Start completed.
+[15:24:24.432][WARN ][org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext.refresh:line624] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute SQL script statement #1 of file [/Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly/build/resources/main/data.sql]: INSERT IGNORE INTO member(ID, NICKNAME, NAME, AGE, PART, GENERATION) VALUES (1, '유난', '최윤한', 20, 'SERVER', 33), (2, 'DDD', '정준서', 24, 'SERVER', 33), (3, '멜로니', '김해린', 26, 'PLAN', 33), (4, '티벳여우', '이태희', 25, 'ANDROID', 33)
+[15:24:24.433][INFO ][com.zaxxer.hikari.HikariDataSource.close:line350] - HikariPool-1 - Shutdown initiated...
+[15:24:24.435][INFO ][com.zaxxer.hikari.HikariDataSource.close:line352] - HikariPool-1 - Shutdown completed.
+[15:24:24.436][INFO ][org.apache.catalina.core.StandardService.log:line173] - Stopping service [Tomcat]
+[15:24:24.446][INFO ][org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger.logMessage:line82] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[15:24:24.458][ERROR][org.springframework.boot.SpringApplication.reportFailure:line824] - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute SQL script statement #1 of file [/Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly/build/resources/main/data.sql]: INSERT IGNORE INTO member(ID, NICKNAME, NAME, AGE, PART, GENERATION) VALUES (1, '유난', '최윤한', 20, 'SERVER', 33), (2, 'DDD', '정준서', 24, 'SERVER', 33), (3, '멜로니', '김해린', 26, 'PLAN', 33), (4, '티벳여우', '이태희', 25, 'ANDROID', 33)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:312)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1166)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:940)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:616)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:738)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:440)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at org.dosopt.www.marketkurly.MarketKurlyApplication.main(MarketKurlyApplication.java:10)
+Caused by: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of file [/Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly/build/resources/main/data.sql]: INSERT IGNORE INTO member(ID, NICKNAME, NAME, AGE, PART, GENERATION) VALUES (1, '유난', '최윤한', 20, 'SERVER', 33), (2, 'DDD', '정준서', 24, 'SERVER', 33), (3, '멜로니', '김해린', 26, 'PLAN', 33), (4, '티벳여우', '이태희', 25, 'ANDROID', 33)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282)
+	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254)
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:54)
+	at org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer.runScripts(DataSourceScriptDatabaseInitializer.java:87)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.runScripts(AbstractScriptDatabaseInitializer.java:146)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyScripts(AbstractScriptDatabaseInitializer.java:108)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyDataScripts(AbstractScriptDatabaseInitializer.java:102)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.initializeDatabase(AbstractScriptDatabaseInitializer.java:77)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.afterPropertiesSet(AbstractScriptDatabaseInitializer.java:66)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	... 18 common frames omitted
+Caused by: java.sql.SQLSyntaxErrorException: Table 'marketkurly.member' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261)
+	... 28 common frames omitted
+[15:24:46.479][INFO ][org.dosopt.www.marketkurly.MarketKurlyApplication.logStarting:line51] - Starting MarketKurlyApplication using Java 17.0.8.1 with PID 35714 (/Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly/build/classes/java/main started by dahyunkim in /Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly)
+[15:24:46.482][INFO ][org.dosopt.www.marketkurly.MarketKurlyApplication.logStartupProfileInfo:line644] - The following 5 profiles are active: "database", "log", "local", "local-db", "local-log"
+[15:24:47.025][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:line138] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[15:24:47.071][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:line208] - Finished Spring Data repository scanning in 41 ms. Found 1 JPA repository interfaces.
+[15:24:47.444][INFO ][org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize:line108] - Tomcat initialized with port(s): 8080 (http)
+[15:24:47.451][INFO ][org.apache.catalina.core.StandardService.log:line173] - Starting service [Tomcat]
+[15:24:47.451][INFO ][org.apache.catalina.core.StandardEngine.log:line173] - Starting Servlet engine: [Apache Tomcat/10.1.15]
+[15:24:47.505][INFO ][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:line173] - Initializing Spring embedded WebApplicationContext
+[15:24:47.505][INFO ][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext:line291] - Root WebApplicationContext: initialization completed in 997 ms
+[15:24:47.572][INFO ][com.zaxxer.hikari.HikariDataSource.getConnection:line110] - HikariPool-1 - Starting...
+[15:24:47.782][INFO ][com.zaxxer.hikari.pool.HikariPool.checkFailFast:line565] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7159d601
+[15:24:47.783][INFO ][com.zaxxer.hikari.HikariDataSource.getConnection:line123] - HikariPool-1 - Start completed.
+[15:24:47.790][WARN ][org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext.refresh:line624] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute database script from resource [file [/Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly/build/resources/main/data.sql]]
+[15:24:47.790][INFO ][com.zaxxer.hikari.HikariDataSource.close:line350] - HikariPool-1 - Shutdown initiated...
+[15:24:47.793][INFO ][com.zaxxer.hikari.HikariDataSource.close:line352] - HikariPool-1 - Shutdown completed.
+[15:24:47.795][INFO ][org.apache.catalina.core.StandardService.log:line173] - Stopping service [Tomcat]
+[15:24:47.804][INFO ][org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger.logMessage:line82] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[15:24:47.815][ERROR][org.springframework.boot.SpringApplication.reportFailure:line824] - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute database script from resource [file [/Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly/build/resources/main/data.sql]]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:312)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1166)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:940)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:616)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:738)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:440)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at org.dosopt.www.marketkurly.MarketKurlyApplication.main(MarketKurlyApplication.java:10)
+Caused by: org.springframework.jdbc.datasource.init.UncategorizedScriptException: Failed to execute database script from resource [file [/Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly/build/resources/main/data.sql]]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:305)
+	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254)
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:54)
+	at org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer.runScripts(DataSourceScriptDatabaseInitializer.java:87)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.runScripts(AbstractScriptDatabaseInitializer.java:146)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyScripts(AbstractScriptDatabaseInitializer.java:108)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyDataScripts(AbstractScriptDatabaseInitializer.java:102)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.initializeDatabase(AbstractScriptDatabaseInitializer.java:77)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.afterPropertiesSet(AbstractScriptDatabaseInitializer.java:66)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	... 18 common frames omitted
+Caused by: java.lang.IllegalArgumentException: 'script' must not be null or empty
+	at org.springframework.util.Assert.hasText(Assert.java:294)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.splitSqlScript(ScriptUtils.java:636)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:252)
+	... 28 common frames omitted
+[15:53:19.636][INFO ][org.dosopt.www.marketkurly.MarketKurlyApplication.logStarting:line51] - Starting MarketKurlyApplication using Java 17.0.8.1 with PID 49959 (/Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly/build/classes/java/main started by dahyunkim in /Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly)
+[15:53:19.641][INFO ][org.dosopt.www.marketkurly.MarketKurlyApplication.logStartupProfileInfo:line644] - The following 5 profiles are active: "database", "log", "local", "local-db", "local-log"
+[15:53:20.513][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:line138] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[15:53:20.551][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:line208] - Finished Spring Data repository scanning in 33 ms. Found 1 JPA repository interfaces.
+[15:53:20.928][INFO ][org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize:line108] - Tomcat initialized with port(s): 8080 (http)
+[15:53:20.935][INFO ][org.apache.catalina.core.StandardService.log:line173] - Starting service [Tomcat]
+[15:53:20.935][INFO ][org.apache.catalina.core.StandardEngine.log:line173] - Starting Servlet engine: [Apache Tomcat/10.1.15]
+[15:53:20.991][INFO ][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:line173] - Initializing Spring embedded WebApplicationContext
+[15:53:20.991][INFO ][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext:line291] - Root WebApplicationContext: initialization completed in 1273 ms
+[15:53:21.055][INFO ][com.zaxxer.hikari.HikariDataSource.getConnection:line110] - HikariPool-1 - Starting...
+[15:53:21.273][INFO ][com.zaxxer.hikari.pool.HikariPool.checkFailFast:line565] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1894fa9f
+[15:53:21.274][INFO ][com.zaxxer.hikari.HikariDataSource.getConnection:line123] - HikariPool-1 - Start completed.
+[15:53:21.299][WARN ][org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext.refresh:line624] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute SQL script statement #1 of file [/Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly/build/resources/main/data.sql]: INSERT IGNORE INTO seller(id, name) VALUES (null, '컬리')
+[15:53:21.300][INFO ][com.zaxxer.hikari.HikariDataSource.close:line350] - HikariPool-1 - Shutdown initiated...
+[15:53:21.303][INFO ][com.zaxxer.hikari.HikariDataSource.close:line352] - HikariPool-1 - Shutdown completed.
+[15:53:21.304][INFO ][org.apache.catalina.core.StandardService.log:line173] - Stopping service [Tomcat]
+[15:53:21.314][INFO ][org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger.logMessage:line82] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[15:53:21.325][ERROR][org.springframework.boot.SpringApplication.reportFailure:line824] - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute SQL script statement #1 of file [/Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly/build/resources/main/data.sql]: INSERT IGNORE INTO seller(id, name) VALUES (null, '컬리')
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:312)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1166)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:940)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:616)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:738)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:440)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at org.dosopt.www.marketkurly.MarketKurlyApplication.main(MarketKurlyApplication.java:10)
+Caused by: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of file [/Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly/build/resources/main/data.sql]: INSERT IGNORE INTO seller(id, name) VALUES (null, '컬리')
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282)
+	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254)
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:54)
+	at org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer.runScripts(DataSourceScriptDatabaseInitializer.java:87)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.runScripts(AbstractScriptDatabaseInitializer.java:146)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyScripts(AbstractScriptDatabaseInitializer.java:108)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyDataScripts(AbstractScriptDatabaseInitializer.java:102)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.initializeDatabase(AbstractScriptDatabaseInitializer.java:77)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.afterPropertiesSet(AbstractScriptDatabaseInitializer.java:66)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	... 18 common frames omitted
+Caused by: java.sql.SQLSyntaxErrorException: Table 'marketkurly.seller' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261)
+	... 28 common frames omitted
+[15:56:43.794][INFO ][org.dosopt.www.marketkurly.MarketKurlyApplication.logStarting:line51] - Starting MarketKurlyApplication using Java 17.0.8.1 with PID 51705 (/Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly/build/classes/java/main started by dahyunkim in /Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly)
+[15:56:43.796][INFO ][org.dosopt.www.marketkurly.MarketKurlyApplication.logStartupProfileInfo:line644] - The following 5 profiles are active: "database", "log", "local", "local-db", "local-log"
+[15:56:44.341][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:line138] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[15:56:44.381][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:line208] - Finished Spring Data repository scanning in 35 ms. Found 1 JPA repository interfaces.
+[15:56:44.743][INFO ][org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize:line108] - Tomcat initialized with port(s): 8080 (http)
+[15:56:44.750][INFO ][org.apache.catalina.core.StandardService.log:line173] - Starting service [Tomcat]
+[15:56:44.750][INFO ][org.apache.catalina.core.StandardEngine.log:line173] - Starting Servlet engine: [Apache Tomcat/10.1.15]
+[15:56:44.804][INFO ][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:line173] - Initializing Spring embedded WebApplicationContext
+[15:56:44.804][INFO ][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext:line291] - Root WebApplicationContext: initialization completed in 984 ms
+[15:56:44.869][INFO ][com.zaxxer.hikari.HikariDataSource.getConnection:line110] - HikariPool-1 - Starting...
+[15:56:45.130][INFO ][com.zaxxer.hikari.pool.HikariPool.checkFailFast:line565] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5d7f8467
+[15:56:45.132][INFO ][com.zaxxer.hikari.HikariDataSource.getConnection:line123] - HikariPool-1 - Start completed.
+[15:56:45.183][INFO ][org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:line31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+[15:56:45.215][INFO ][org.hibernate.Version.logVersion:line44] - HHH000412: Hibernate ORM core version 6.2.13.Final
+[15:56:45.216][INFO ][org.hibernate.cfg.Environment.<clinit>:line191] - HHH000406: Using bytecode reflection optimizer
+[15:56:45.401][INFO ][org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo.addTransformer:line87] - No LoadTimeWeaver setup: ignoring JPA class transformer
+[15:56:45.447][WARN ][org.hibernate.orm.deprecation.constructDialect:line152] - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[15:56:45.448][WARN ][org.hibernate.orm.deprecation.logSelectedDialect:line100] - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+[15:56:46.038][INFO ][org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator.initiateService:line55] - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[15:56:46.061][WARN ][org.hibernate.tool.schema.internal.ExceptionHandlerLoggedImpl.handleException:line27] - GenerationTarget encountered exception accepting command : Error executing DDL "alter table product drop foreign key FKesd6fy52tk7esoo2gcls4lfe3" via JDBC [Table 'marketkurly.product' doesn't exist]
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table product drop foreign key FKesd6fy52tk7esoo2gcls4lfe3" via JDBC [Table 'marketkurly.product' doesn't exist]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94)
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:233)
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:217)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:455)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropConstraintsTablesSequences(SchemaDropperImpl.java:242)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:215)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:185)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:155)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:115)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:242)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:143)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:140)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:293)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:444)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1458)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1166)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:940)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:616)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:738)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:440)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at org.dosopt.www.marketkurly.MarketKurlyApplication.main(MarketKurlyApplication.java:10)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'marketkurly.product' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80)
+	... 40 common frames omitted
+[15:56:46.065][WARN ][org.hibernate.tool.schema.internal.ExceptionHandlerLoggedImpl.handleException:line27] - GenerationTarget encountered exception accepting command : Error executing DDL "alter table sub_category drop foreign key FKl65dyy5me2ypoyj8ou1hnt64e" via JDBC [Table 'marketkurly.sub_category' doesn't exist]
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table sub_category drop foreign key FKl65dyy5me2ypoyj8ou1hnt64e" via JDBC [Table 'marketkurly.sub_category' doesn't exist]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94)
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:233)
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:217)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:455)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropConstraintsTablesSequences(SchemaDropperImpl.java:242)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:215)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:185)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:155)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:115)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:242)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:143)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:140)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:293)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:444)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1458)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1166)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:940)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:616)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:738)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:440)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at org.dosopt.www.marketkurly.MarketKurlyApplication.main(MarketKurlyApplication.java:10)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'marketkurly.sub_category' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80)
+	... 40 common frames omitted
+[15:56:46.172][INFO ][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:line437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[15:56:46.432][WARN ][org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor:line231] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[15:56:46.447][WARN ][org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration.getOrDeducePassword:line87] - 
+
+Using generated security password: a744c383-986c-45be-94cd-1009d5a55f5c
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+[15:56:46.506][INFO ][org.springframework.security.web.DefaultSecurityFilterChain.<init>:line54] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5b312863, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1cf7c055, org.springframework.security.web.context.SecurityContextHolderFilter@785477e5, org.springframework.security.web.header.HeaderWriterFilter@14f254f, org.springframework.security.web.authentication.logout.LogoutFilter@2a5c115b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@41962299, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5e572b08, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4b6fc231, org.springframework.security.web.access.ExceptionTranslationFilter@71f86562, org.springframework.security.web.access.intercept.AuthorizationFilter@4010f232]
+[15:56:46.949][INFO ][org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start:line220] - Tomcat started on port(s): 8080 (http) with context path ''
+[15:56:46.957][INFO ][org.dosopt.www.marketkurly.MarketKurlyApplication.logStarted:line57] - Started MarketKurlyApplication in 3.457 seconds (process running for 4.017)
+[15:57:54.002][INFO ][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.destroy:line650] - Closing JPA EntityManagerFactory for persistence unit 'default'
+[15:57:54.006][INFO ][com.zaxxer.hikari.HikariDataSource.close:line350] - HikariPool-1 - Shutdown initiated...
+[15:57:54.014][INFO ][com.zaxxer.hikari.HikariDataSource.close:line352] - HikariPool-1 - Shutdown completed.
+[15:57:56.140][INFO ][org.dosopt.www.marketkurly.MarketKurlyApplication.logStarting:line51] - Starting MarketKurlyApplication using Java 17.0.8.1 with PID 52237 (/Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly/build/classes/java/main started by dahyunkim in /Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly)
+[15:57:56.141][INFO ][org.dosopt.www.marketkurly.MarketKurlyApplication.logStartupProfileInfo:line644] - The following 5 profiles are active: "database", "log", "local", "local-db", "local-log"
+[15:57:56.799][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:line138] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[15:57:56.847][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:line208] - Finished Spring Data repository scanning in 41 ms. Found 1 JPA repository interfaces.
+[15:57:57.202][INFO ][org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize:line108] - Tomcat initialized with port(s): 8080 (http)
+[15:57:57.208][INFO ][org.apache.catalina.core.StandardService.log:line173] - Starting service [Tomcat]
+[15:57:57.208][INFO ][org.apache.catalina.core.StandardEngine.log:line173] - Starting Servlet engine: [Apache Tomcat/10.1.15]
+[15:57:57.261][INFO ][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:line173] - Initializing Spring embedded WebApplicationContext
+[15:57:57.262][INFO ][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext:line291] - Root WebApplicationContext: initialization completed in 1094 ms
+[15:57:57.326][INFO ][com.zaxxer.hikari.HikariDataSource.getConnection:line110] - HikariPool-1 - Starting...
+[15:57:57.559][INFO ][com.zaxxer.hikari.pool.HikariPool.checkFailFast:line565] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@70b33256
+[15:57:57.560][INFO ][com.zaxxer.hikari.HikariDataSource.getConnection:line123] - HikariPool-1 - Start completed.
+[15:57:57.588][WARN ][org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext.refresh:line624] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute SQL script statement #2 of file [/Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly/build/resources/main/data.sql]: INSERT IGNORE INTO product(id, productName, price, imageURL, discountRate, deliveryType, seller) VALUES (null, '[전주 베테랑] 칼국수', 5000, 'https://insopt-seminar3.s3.ap-northeast-2.amazonaws.com/marketKurly/kurly1.png', 20, "샛별배송", 1 )
+[15:57:57.589][INFO ][com.zaxxer.hikari.HikariDataSource.close:line350] - HikariPool-1 - Shutdown initiated...
+[15:57:57.592][INFO ][com.zaxxer.hikari.HikariDataSource.close:line352] - HikariPool-1 - Shutdown completed.
+[15:57:57.593][INFO ][org.apache.catalina.core.StandardService.log:line173] - Stopping service [Tomcat]
+[15:57:57.603][INFO ][org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger.logMessage:line82] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[15:57:57.613][ERROR][org.springframework.boot.SpringApplication.reportFailure:line824] - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute SQL script statement #2 of file [/Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly/build/resources/main/data.sql]: INSERT IGNORE INTO product(id, productName, price, imageURL, discountRate, deliveryType, seller) VALUES (null, '[전주 베테랑] 칼국수', 5000, 'https://insopt-seminar3.s3.ap-northeast-2.amazonaws.com/marketKurly/kurly1.png', 20, "샛별배송", 1 )
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:312)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1166)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:940)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:616)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:738)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:440)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at org.dosopt.www.marketkurly.MarketKurlyApplication.main(MarketKurlyApplication.java:10)
+Caused by: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #2 of file [/Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly/build/resources/main/data.sql]: INSERT IGNORE INTO product(id, productName, price, imageURL, discountRate, deliveryType, seller) VALUES (null, '[전주 베테랑] 칼국수', 5000, 'https://insopt-seminar3.s3.ap-northeast-2.amazonaws.com/marketKurly/kurly1.png', 20, "샛별배송", 1 )
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282)
+	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254)
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:54)
+	at org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer.runScripts(DataSourceScriptDatabaseInitializer.java:87)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.runScripts(AbstractScriptDatabaseInitializer.java:146)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyScripts(AbstractScriptDatabaseInitializer.java:108)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyDataScripts(AbstractScriptDatabaseInitializer.java:102)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.initializeDatabase(AbstractScriptDatabaseInitializer.java:77)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.afterPropertiesSet(AbstractScriptDatabaseInitializer.java:66)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	... 18 common frames omitted
+Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'productName' in 'field list'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261)
+	... 28 common frames omitted
+[16:16:51.038][INFO ][org.dosopt.www.marketkurly.MarketKurlyApplication.logStarting:line51] - Starting MarketKurlyApplication using Java 17.0.8.1 with PID 61734 (/Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly/build/classes/java/main started by dahyunkim in /Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly)
+[16:16:51.041][INFO ][org.dosopt.www.marketkurly.MarketKurlyApplication.logStartupProfileInfo:line644] - The following 5 profiles are active: "database", "log", "local", "local-db", "local-log"
+[16:16:51.574][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:line138] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[16:16:51.609][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:line208] - Finished Spring Data repository scanning in 31 ms. Found 1 JPA repository interfaces.
+[16:16:51.995][INFO ][org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize:line108] - Tomcat initialized with port(s): 8080 (http)
+[16:16:52.002][INFO ][org.apache.catalina.core.StandardService.log:line173] - Starting service [Tomcat]
+[16:16:52.002][INFO ][org.apache.catalina.core.StandardEngine.log:line173] - Starting Servlet engine: [Apache Tomcat/10.1.15]
+[16:16:52.056][INFO ][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:line173] - Initializing Spring embedded WebApplicationContext
+[16:16:52.056][INFO ][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext:line291] - Root WebApplicationContext: initialization completed in 986 ms
+[16:16:52.119][INFO ][com.zaxxer.hikari.HikariDataSource.getConnection:line110] - HikariPool-1 - Starting...
+[16:16:52.338][INFO ][com.zaxxer.hikari.pool.HikariPool.checkFailFast:line565] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@45287377
+[16:16:52.340][INFO ][com.zaxxer.hikari.HikariDataSource.getConnection:line123] - HikariPool-1 - Start completed.
+[16:16:52.363][WARN ][org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext.refresh:line624] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute SQL script statement #2 of file [/Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly/build/resources/main/data.sql]: INSERT IGNORE INTO product(id, productName, price, imageURL, discountRate, deliveryType, seller) VALUES (null, "[전주 베테랑] 칼국수", 5000, "https://insopt-seminar3.s3.ap-northeast-2.amazonaws.com/marketKurly/kurly1.pn", 20, "샛별배송", 1 )
+[16:16:52.364][INFO ][com.zaxxer.hikari.HikariDataSource.close:line350] - HikariPool-1 - Shutdown initiated...
+[16:16:52.367][INFO ][com.zaxxer.hikari.HikariDataSource.close:line352] - HikariPool-1 - Shutdown completed.
+[16:16:52.369][INFO ][org.apache.catalina.core.StandardService.log:line173] - Stopping service [Tomcat]
+[16:16:52.379][INFO ][org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger.logMessage:line82] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[16:16:52.390][ERROR][org.springframework.boot.SpringApplication.reportFailure:line824] - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute SQL script statement #2 of file [/Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly/build/resources/main/data.sql]: INSERT IGNORE INTO product(id, productName, price, imageURL, discountRate, deliveryType, seller) VALUES (null, "[전주 베테랑] 칼국수", 5000, "https://insopt-seminar3.s3.ap-northeast-2.amazonaws.com/marketKurly/kurly1.pn", 20, "샛별배송", 1 )
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:312)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1166)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:940)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:616)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:738)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:440)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at org.dosopt.www.marketkurly.MarketKurlyApplication.main(MarketKurlyApplication.java:10)
+Caused by: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #2 of file [/Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly/build/resources/main/data.sql]: INSERT IGNORE INTO product(id, productName, price, imageURL, discountRate, deliveryType, seller) VALUES (null, "[전주 베테랑] 칼국수", 5000, "https://insopt-seminar3.s3.ap-northeast-2.amazonaws.com/marketKurly/kurly1.pn", 20, "샛별배송", 1 )
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282)
+	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254)
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:54)
+	at org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer.runScripts(DataSourceScriptDatabaseInitializer.java:87)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.runScripts(AbstractScriptDatabaseInitializer.java:146)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyScripts(AbstractScriptDatabaseInitializer.java:108)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyDataScripts(AbstractScriptDatabaseInitializer.java:102)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.initializeDatabase(AbstractScriptDatabaseInitializer.java:77)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.afterPropertiesSet(AbstractScriptDatabaseInitializer.java:66)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	... 18 common frames omitted
+Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'productName' in 'field list'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261)
+	... 28 common frames omitted
+[16:19:22.060][INFO ][org.dosopt.www.marketkurly.MarketKurlyApplication.logStarting:line51] - Starting MarketKurlyApplication using Java 17.0.8.1 with PID 62993 (/Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly/build/classes/java/main started by dahyunkim in /Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly)
+[16:19:22.062][INFO ][org.dosopt.www.marketkurly.MarketKurlyApplication.logStartupProfileInfo:line644] - The following 5 profiles are active: "database", "log", "local", "local-db", "local-log"
+[16:19:22.574][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:line138] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[16:19:22.610][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:line208] - Finished Spring Data repository scanning in 31 ms. Found 1 JPA repository interfaces.
+[16:19:22.975][INFO ][org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize:line108] - Tomcat initialized with port(s): 8080 (http)
+[16:19:22.981][INFO ][org.apache.catalina.core.StandardService.log:line173] - Starting service [Tomcat]
+[16:19:22.982][INFO ][org.apache.catalina.core.StandardEngine.log:line173] - Starting Servlet engine: [Apache Tomcat/10.1.15]
+[16:19:23.034][INFO ][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:line173] - Initializing Spring embedded WebApplicationContext
+[16:19:23.035][INFO ][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext:line291] - Root WebApplicationContext: initialization completed in 949 ms
+[16:19:23.096][INFO ][com.zaxxer.hikari.HikariDataSource.getConnection:line110] - HikariPool-1 - Starting...
+[16:19:23.326][INFO ][com.zaxxer.hikari.pool.HikariPool.checkFailFast:line565] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@49cc9b2a
+[16:19:23.327][INFO ][com.zaxxer.hikari.HikariDataSource.getConnection:line123] - HikariPool-1 - Start completed.
+[16:19:23.349][WARN ][org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext.refresh:line624] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute SQL script statement #2 of file [/Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly/build/resources/main/data.sql]: INSERT IGNORE INTO product(id, productName, price, imageURL, discountRate, deliveryType, seller) VALUES (null, '[전주 베테랑] 칼국수', 5000, 'https://insopt-seminar3.s3.ap-northeast-2.amazonaws.com/marketKurly/kurly1.png', 20, '샛별배송', 1 )
+[16:19:23.350][INFO ][com.zaxxer.hikari.HikariDataSource.close:line350] - HikariPool-1 - Shutdown initiated...
+[16:19:23.353][INFO ][com.zaxxer.hikari.HikariDataSource.close:line352] - HikariPool-1 - Shutdown completed.
+[16:19:23.354][INFO ][org.apache.catalina.core.StandardService.log:line173] - Stopping service [Tomcat]
+[16:19:23.364][INFO ][org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger.logMessage:line82] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[16:19:23.378][ERROR][org.springframework.boot.SpringApplication.reportFailure:line824] - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute SQL script statement #2 of file [/Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly/build/resources/main/data.sql]: INSERT IGNORE INTO product(id, productName, price, imageURL, discountRate, deliveryType, seller) VALUES (null, '[전주 베테랑] 칼국수', 5000, 'https://insopt-seminar3.s3.ap-northeast-2.amazonaws.com/marketKurly/kurly1.png', 20, '샛별배송', 1 )
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:312)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1166)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:940)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:616)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:738)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:440)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at org.dosopt.www.marketkurly.MarketKurlyApplication.main(MarketKurlyApplication.java:10)
+Caused by: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #2 of file [/Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly/build/resources/main/data.sql]: INSERT IGNORE INTO product(id, productName, price, imageURL, discountRate, deliveryType, seller) VALUES (null, '[전주 베테랑] 칼국수', 5000, 'https://insopt-seminar3.s3.ap-northeast-2.amazonaws.com/marketKurly/kurly1.png', 20, '샛별배송', 1 )
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282)
+	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254)
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:54)
+	at org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer.runScripts(DataSourceScriptDatabaseInitializer.java:87)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.runScripts(AbstractScriptDatabaseInitializer.java:146)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyScripts(AbstractScriptDatabaseInitializer.java:108)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyDataScripts(AbstractScriptDatabaseInitializer.java:102)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.initializeDatabase(AbstractScriptDatabaseInitializer.java:77)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.afterPropertiesSet(AbstractScriptDatabaseInitializer.java:66)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	... 18 common frames omitted
+Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'productName' in 'field list'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261)
+	... 28 common frames omitted
+[16:21:25.389][INFO ][org.dosopt.www.marketkurly.MarketKurlyApplication.logStarting:line51] - Starting MarketKurlyApplication using Java 17.0.8.1 with PID 64089 (/Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly/build/classes/java/main started by dahyunkim in /Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly)
+[16:21:25.392][INFO ][org.dosopt.www.marketkurly.MarketKurlyApplication.logStartupProfileInfo:line644] - The following 5 profiles are active: "database", "log", "local", "local-db", "local-log"
+[16:21:26.056][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:line138] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[16:21:26.107][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:line208] - Finished Spring Data repository scanning in 45 ms. Found 1 JPA repository interfaces.
+[16:21:26.489][INFO ][org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize:line108] - Tomcat initialized with port(s): 8080 (http)
+[16:21:26.496][INFO ][org.apache.catalina.core.StandardService.log:line173] - Starting service [Tomcat]
+[16:21:26.496][INFO ][org.apache.catalina.core.StandardEngine.log:line173] - Starting Servlet engine: [Apache Tomcat/10.1.15]
+[16:21:26.552][INFO ][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:line173] - Initializing Spring embedded WebApplicationContext
+[16:21:26.552][INFO ][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext:line291] - Root WebApplicationContext: initialization completed in 1121 ms
+[16:21:26.619][INFO ][com.zaxxer.hikari.HikariDataSource.getConnection:line110] - HikariPool-1 - Starting...
+[16:21:26.840][INFO ][com.zaxxer.hikari.pool.HikariPool.checkFailFast:line565] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@45287377
+[16:21:26.842][INFO ][com.zaxxer.hikari.HikariDataSource.getConnection:line123] - HikariPool-1 - Start completed.
+[16:21:26.864][WARN ][org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext.refresh:line624] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute SQL script statement #2 of file [/Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly/build/resources/main/data.sql]: INSERT IGNORE INTO product(id, product_name, price, imageurl, discount_rate, delivery_type, seller) VALUES (null, '[전주 베테랑] 칼국수', 5000, 'https://insopt-seminar3.s3.ap-northeast-2.amazonaws.com/marketKurly/kurly1.png', 20, '샛별배송', 1 )
+[16:21:26.864][INFO ][com.zaxxer.hikari.HikariDataSource.close:line350] - HikariPool-1 - Shutdown initiated...
+[16:21:26.868][INFO ][com.zaxxer.hikari.HikariDataSource.close:line352] - HikariPool-1 - Shutdown completed.
+[16:21:26.869][INFO ][org.apache.catalina.core.StandardService.log:line173] - Stopping service [Tomcat]
+[16:21:26.879][INFO ][org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger.logMessage:line82] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[16:21:26.889][ERROR][org.springframework.boot.SpringApplication.reportFailure:line824] - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute SQL script statement #2 of file [/Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly/build/resources/main/data.sql]: INSERT IGNORE INTO product(id, product_name, price, imageurl, discount_rate, delivery_type, seller) VALUES (null, '[전주 베테랑] 칼국수', 5000, 'https://insopt-seminar3.s3.ap-northeast-2.amazonaws.com/marketKurly/kurly1.png', 20, '샛별배송', 1 )
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:312)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1166)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:940)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:616)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:738)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:440)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at org.dosopt.www.marketkurly.MarketKurlyApplication.main(MarketKurlyApplication.java:10)
+Caused by: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #2 of file [/Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly/build/resources/main/data.sql]: INSERT IGNORE INTO product(id, product_name, price, imageurl, discount_rate, delivery_type, seller) VALUES (null, '[전주 베테랑] 칼국수', 5000, 'https://insopt-seminar3.s3.ap-northeast-2.amazonaws.com/marketKurly/kurly1.png', 20, '샛별배송', 1 )
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282)
+	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254)
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:54)
+	at org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer.runScripts(DataSourceScriptDatabaseInitializer.java:87)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.runScripts(AbstractScriptDatabaseInitializer.java:146)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyScripts(AbstractScriptDatabaseInitializer.java:108)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyDataScripts(AbstractScriptDatabaseInitializer.java:102)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.initializeDatabase(AbstractScriptDatabaseInitializer.java:77)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.afterPropertiesSet(AbstractScriptDatabaseInitializer.java:66)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	... 18 common frames omitted
+Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'seller' in 'field list'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261)
+	... 28 common frames omitted
+[16:21:37.679][INFO ][org.dosopt.www.marketkurly.MarketKurlyApplication.logStarting:line51] - Starting MarketKurlyApplication using Java 17.0.8.1 with PID 64181 (/Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly/build/classes/java/main started by dahyunkim in /Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly)
+[16:21:37.681][INFO ][org.dosopt.www.marketkurly.MarketKurlyApplication.logStartupProfileInfo:line644] - The following 5 profiles are active: "database", "log", "local", "local-db", "local-log"
+[16:21:38.374][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:line138] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[16:21:38.426][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:line208] - Finished Spring Data repository scanning in 46 ms. Found 1 JPA repository interfaces.
+[16:21:39.011][INFO ][org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize:line108] - Tomcat initialized with port(s): 8080 (http)
+[16:21:39.019][INFO ][org.apache.catalina.core.StandardService.log:line173] - Starting service [Tomcat]
+[16:21:39.019][INFO ][org.apache.catalina.core.StandardEngine.log:line173] - Starting Servlet engine: [Apache Tomcat/10.1.15]
+[16:21:39.081][INFO ][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:line173] - Initializing Spring embedded WebApplicationContext
+[16:21:39.082][INFO ][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext:line291] - Root WebApplicationContext: initialization completed in 1375 ms
+[16:21:39.153][INFO ][com.zaxxer.hikari.HikariDataSource.getConnection:line110] - HikariPool-1 - Starting...
+[16:21:39.366][INFO ][com.zaxxer.hikari.pool.HikariPool.checkFailFast:line565] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4e17442f
+[16:21:39.367][INFO ][com.zaxxer.hikari.HikariDataSource.getConnection:line123] - HikariPool-1 - Start completed.
+[16:21:39.422][INFO ][org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:line31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+[16:21:39.454][INFO ][org.hibernate.Version.logVersion:line44] - HHH000412: Hibernate ORM core version 6.2.13.Final
+[16:21:39.456][INFO ][org.hibernate.cfg.Environment.<clinit>:line191] - HHH000406: Using bytecode reflection optimizer
+[16:21:39.640][INFO ][org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo.addTransformer:line87] - No LoadTimeWeaver setup: ignoring JPA class transformer
+[16:21:39.689][WARN ][org.hibernate.orm.deprecation.constructDialect:line152] - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[16:21:39.690][WARN ][org.hibernate.orm.deprecation.logSelectedDialect:line100] - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+[16:21:40.277][INFO ][org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator.initiateService:line55] - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[16:21:40.442][INFO ][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:line437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[16:21:40.702][WARN ][org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor:line231] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[16:21:40.716][WARN ][org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration.getOrDeducePassword:line87] - 
+
+Using generated security password: 52d01410-ae52-47fb-a46c-9da23c3bb2ed
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+[16:21:40.778][INFO ][org.springframework.security.web.DefaultSecurityFilterChain.<init>:line54] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4917992b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@62536882, org.springframework.security.web.context.SecurityContextHolderFilter@31c31fa6, org.springframework.security.web.header.HeaderWriterFilter@1dbb9a4a, org.springframework.security.web.authentication.logout.LogoutFilter@247d44b4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3d5e3f58, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@29b2a94c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1e9d6c78, org.springframework.security.web.access.ExceptionTranslationFilter@78a0d664, org.springframework.security.web.access.intercept.AuthorizationFilter@3453f79c]
+[16:21:41.234][INFO ][org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start:line220] - Tomcat started on port(s): 8080 (http) with context path ''
+[16:21:41.242][INFO ][org.dosopt.www.marketkurly.MarketKurlyApplication.logStarted:line57] - Started MarketKurlyApplication in 3.852 seconds (process running for 4.218)
+[16:25:00.424][INFO ][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.destroy:line650] - Closing JPA EntityManagerFactory for persistence unit 'default'
+[16:25:00.427][INFO ][com.zaxxer.hikari.HikariDataSource.close:line350] - HikariPool-1 - Shutdown initiated...
+[16:25:00.433][INFO ][com.zaxxer.hikari.HikariDataSource.close:line352] - HikariPool-1 - Shutdown completed.
+[16:25:02.667][INFO ][org.dosopt.www.marketkurly.MarketKurlyApplication.logStarting:line51] - Starting MarketKurlyApplication using Java 17.0.8.1 with PID 65837 (/Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly/build/classes/java/main started by dahyunkim in /Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly)
+[16:25:02.670][INFO ][org.dosopt.www.marketkurly.MarketKurlyApplication.logStartupProfileInfo:line644] - The following 5 profiles are active: "database", "log", "local", "local-db", "local-log"
+[16:25:03.172][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:line138] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[16:25:03.207][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:line208] - Finished Spring Data repository scanning in 30 ms. Found 1 JPA repository interfaces.
+[16:25:03.577][INFO ][org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize:line108] - Tomcat initialized with port(s): 8080 (http)
+[16:25:03.584][INFO ][org.apache.catalina.core.StandardService.log:line173] - Starting service [Tomcat]
+[16:25:03.584][INFO ][org.apache.catalina.core.StandardEngine.log:line173] - Starting Servlet engine: [Apache Tomcat/10.1.15]
+[16:25:03.636][INFO ][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:line173] - Initializing Spring embedded WebApplicationContext
+[16:25:03.637][INFO ][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext:line291] - Root WebApplicationContext: initialization completed in 939 ms
+[16:25:03.698][INFO ][com.zaxxer.hikari.HikariDataSource.getConnection:line110] - HikariPool-1 - Starting...
+[16:25:03.906][INFO ][com.zaxxer.hikari.pool.HikariPool.checkFailFast:line565] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7159d601
+[16:25:03.908][INFO ][com.zaxxer.hikari.HikariDataSource.getConnection:line123] - HikariPool-1 - Start completed.
+[16:25:03.930][WARN ][org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext.refresh:line624] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute SQL script statement #2 of file [/Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly/build/resources/main/data.sql]: INSERT INTO product(id, product_name, price, imageurl, discount_rate, delivery_type, seller_id) VALUES (null, '[전주 베테랑] 칼국수', 5000, 'https://insopt-seminar3.s3.ap-northeast-2.amazonaws.com/marketKurly/kurly1.png', 20, '샛별배송', 1 )
+[16:25:03.931][INFO ][com.zaxxer.hikari.HikariDataSource.close:line350] - HikariPool-1 - Shutdown initiated...
+[16:25:03.934][INFO ][com.zaxxer.hikari.HikariDataSource.close:line352] - HikariPool-1 - Shutdown completed.
+[16:25:03.935][INFO ][org.apache.catalina.core.StandardService.log:line173] - Stopping service [Tomcat]
+[16:25:03.945][INFO ][org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger.logMessage:line82] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[16:25:03.956][ERROR][org.springframework.boot.SpringApplication.reportFailure:line824] - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute SQL script statement #2 of file [/Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly/build/resources/main/data.sql]: INSERT INTO product(id, product_name, price, imageurl, discount_rate, delivery_type, seller_id) VALUES (null, '[전주 베테랑] 칼국수', 5000, 'https://insopt-seminar3.s3.ap-northeast-2.amazonaws.com/marketKurly/kurly1.png', 20, '샛별배송', 1 )
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:312)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1166)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:940)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:616)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:738)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:440)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at org.dosopt.www.marketkurly.MarketKurlyApplication.main(MarketKurlyApplication.java:10)
+Caused by: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #2 of file [/Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly/build/resources/main/data.sql]: INSERT INTO product(id, product_name, price, imageurl, discount_rate, delivery_type, seller_id) VALUES (null, '[전주 베테랑] 칼국수', 5000, 'https://insopt-seminar3.s3.ap-northeast-2.amazonaws.com/marketKurly/kurly1.png', 20, '샛별배송', 1 )
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282)
+	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254)
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:54)
+	at org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer.runScripts(DataSourceScriptDatabaseInitializer.java:87)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.runScripts(AbstractScriptDatabaseInitializer.java:146)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyScripts(AbstractScriptDatabaseInitializer.java:108)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyDataScripts(AbstractScriptDatabaseInitializer.java:102)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.initializeDatabase(AbstractScriptDatabaseInitializer.java:77)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.afterPropertiesSet(AbstractScriptDatabaseInitializer.java:66)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	... 18 common frames omitted
+Caused by: java.sql.SQLException: Data truncated for column 'delivery_type' at row 1
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:130)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261)
+	... 28 common frames omitted
+[16:35:34.211][INFO ][org.dosopt.www.marketkurly.MarketKurlyApplication.logStarting:line51] - Starting MarketKurlyApplication using Java 17.0.8.1 with PID 71155 (/Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly/build/classes/java/main started by dahyunkim in /Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly)
+[16:35:34.215][INFO ][org.dosopt.www.marketkurly.MarketKurlyApplication.logStartupProfileInfo:line644] - The following 5 profiles are active: "database", "log", "local", "local-db", "local-log"
+[16:35:35.289][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:line138] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[16:35:35.328][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:line208] - Finished Spring Data repository scanning in 34 ms. Found 1 JPA repository interfaces.
+[16:35:35.699][INFO ][org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize:line108] - Tomcat initialized with port(s): 8080 (http)
+[16:35:35.706][INFO ][org.apache.catalina.core.StandardService.log:line173] - Starting service [Tomcat]
+[16:35:35.707][INFO ][org.apache.catalina.core.StandardEngine.log:line173] - Starting Servlet engine: [Apache Tomcat/10.1.15]
+[16:35:35.760][INFO ][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:line173] - Initializing Spring embedded WebApplicationContext
+[16:35:35.761][INFO ][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext:line291] - Root WebApplicationContext: initialization completed in 1437 ms
+[16:35:35.830][INFO ][com.zaxxer.hikari.HikariDataSource.getConnection:line110] - HikariPool-1 - Starting...
+[16:35:36.050][INFO ][com.zaxxer.hikari.pool.HikariPool.checkFailFast:line565] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@55c1ced9
+[16:35:36.051][INFO ][com.zaxxer.hikari.HikariDataSource.getConnection:line123] - HikariPool-1 - Start completed.
+[16:35:36.073][WARN ][org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext.refresh:line624] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute SQL script statement #2 of file [/Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly/build/resources/main/data.sql]: INSERT INTO product(id, product_name, price, imageurl, discount_rate, delivery_type, seller_id) VALUES (null, '[전주 베테랑] 칼국수', 5000, 'https://insopt-seminar3.s3.ap-northeast-2.amazonaws.com/marketKurly/kurly1.png', 20, '샛별배송', 1 )
+[16:35:36.074][INFO ][com.zaxxer.hikari.HikariDataSource.close:line350] - HikariPool-1 - Shutdown initiated...
+[16:35:36.076][INFO ][com.zaxxer.hikari.HikariDataSource.close:line352] - HikariPool-1 - Shutdown completed.
+[16:35:36.077][INFO ][org.apache.catalina.core.StandardService.log:line173] - Stopping service [Tomcat]
+[16:35:36.087][INFO ][org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger.logMessage:line82] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[16:35:36.097][ERROR][org.springframework.boot.SpringApplication.reportFailure:line824] - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute SQL script statement #2 of file [/Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly/build/resources/main/data.sql]: INSERT INTO product(id, product_name, price, imageurl, discount_rate, delivery_type, seller_id) VALUES (null, '[전주 베테랑] 칼국수', 5000, 'https://insopt-seminar3.s3.ap-northeast-2.amazonaws.com/marketKurly/kurly1.png', 20, '샛별배송', 1 )
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:312)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1166)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:940)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:616)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:738)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:440)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at org.dosopt.www.marketkurly.MarketKurlyApplication.main(MarketKurlyApplication.java:10)
+Caused by: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #2 of file [/Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly/build/resources/main/data.sql]: INSERT INTO product(id, product_name, price, imageurl, discount_rate, delivery_type, seller_id) VALUES (null, '[전주 베테랑] 칼국수', 5000, 'https://insopt-seminar3.s3.ap-northeast-2.amazonaws.com/marketKurly/kurly1.png', 20, '샛별배송', 1 )
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282)
+	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254)
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:54)
+	at org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer.runScripts(DataSourceScriptDatabaseInitializer.java:87)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.runScripts(AbstractScriptDatabaseInitializer.java:146)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyScripts(AbstractScriptDatabaseInitializer.java:108)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyDataScripts(AbstractScriptDatabaseInitializer.java:102)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.initializeDatabase(AbstractScriptDatabaseInitializer.java:77)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.afterPropertiesSet(AbstractScriptDatabaseInitializer.java:66)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	... 18 common frames omitted
+Caused by: java.sql.SQLException: Data truncated for column 'delivery_type' at row 1
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:130)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261)
+	... 28 common frames omitted
+[16:45:31.671][INFO ][org.dosopt.www.marketkurly.MarketKurlyApplication.logStarting:line51] - Starting MarketKurlyApplication using Java 17.0.8.1 with PID 76090 (/Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly/build/classes/java/main started by dahyunkim in /Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly)
+[16:45:31.673][INFO ][org.dosopt.www.marketkurly.MarketKurlyApplication.logStartupProfileInfo:line644] - The following 5 profiles are active: "database", "log", "local", "local-db", "local-log"
+[16:45:32.218][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:line138] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[16:45:32.255][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:line208] - Finished Spring Data repository scanning in 32 ms. Found 1 JPA repository interfaces.
+[16:45:32.629][INFO ][org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize:line108] - Tomcat initialized with port(s): 8080 (http)
+[16:45:32.636][INFO ][org.apache.catalina.core.StandardService.log:line173] - Starting service [Tomcat]
+[16:45:32.636][INFO ][org.apache.catalina.core.StandardEngine.log:line173] - Starting Servlet engine: [Apache Tomcat/10.1.15]
+[16:45:32.696][INFO ][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:line173] - Initializing Spring embedded WebApplicationContext
+[16:45:32.696][INFO ][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext:line291] - Root WebApplicationContext: initialization completed in 996 ms
+[16:45:32.764][INFO ][com.zaxxer.hikari.HikariDataSource.getConnection:line110] - HikariPool-1 - Starting...
+[16:45:32.986][INFO ][com.zaxxer.hikari.pool.HikariPool.checkFailFast:line565] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@45287377
+[16:45:32.988][INFO ][com.zaxxer.hikari.HikariDataSource.getConnection:line123] - HikariPool-1 - Start completed.
+[16:45:33.046][INFO ][org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:line31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+[16:45:33.080][INFO ][org.hibernate.Version.logVersion:line44] - HHH000412: Hibernate ORM core version 6.2.13.Final
+[16:45:33.082][INFO ][org.hibernate.cfg.Environment.<clinit>:line191] - HHH000406: Using bytecode reflection optimizer
+[16:45:33.271][INFO ][org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo.addTransformer:line87] - No LoadTimeWeaver setup: ignoring JPA class transformer
+[16:45:33.314][WARN ][org.hibernate.orm.deprecation.constructDialect:line152] - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[16:45:33.315][WARN ][org.hibernate.orm.deprecation.logSelectedDialect:line100] - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+[16:45:33.903][INFO ][org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator.initiateService:line55] - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[16:45:34.048][INFO ][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:line437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[16:45:34.303][WARN ][org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor:line231] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[16:45:34.317][WARN ][org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration.getOrDeducePassword:line87] - 
+
+Using generated security password: 0aeb7229-29a5-48e3-b35f-8c77d7acf7a8
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+[16:45:34.376][INFO ][org.springframework.security.web.DefaultSecurityFilterChain.<init>:line54] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@60655642, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5c7b504, org.springframework.security.web.context.SecurityContextHolderFilter@5cdf61d, org.springframework.security.web.header.HeaderWriterFilter@13da6bc9, org.springframework.security.web.authentication.logout.LogoutFilter@10c67c1c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@36e9794c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@60e5b3a8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@772589ed, org.springframework.security.web.access.ExceptionTranslationFilter@299cddbf, org.springframework.security.web.access.intercept.AuthorizationFilter@640028f2]
+[16:45:34.810][INFO ][org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start:line220] - Tomcat started on port(s): 8080 (http) with context path ''
+[16:45:34.818][INFO ][org.dosopt.www.marketkurly.MarketKurlyApplication.logStarted:line57] - Started MarketKurlyApplication in 3.441 seconds (process running for 4.003)
+[16:46:51.623][INFO ][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.destroy:line650] - Closing JPA EntityManagerFactory for persistence unit 'default'
+[16:46:51.631][INFO ][com.zaxxer.hikari.HikariDataSource.close:line350] - HikariPool-1 - Shutdown initiated...
+[16:46:51.643][INFO ][com.zaxxer.hikari.HikariDataSource.close:line352] - HikariPool-1 - Shutdown completed.
+[16:46:53.522][INFO ][org.dosopt.www.marketkurly.MarketKurlyApplication.logStarting:line51] - Starting MarketKurlyApplication using Java 17.0.8.1 with PID 76782 (/Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly/build/classes/java/main started by dahyunkim in /Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly)
+[16:46:53.524][INFO ][org.dosopt.www.marketkurly.MarketKurlyApplication.logStartupProfileInfo:line644] - The following 5 profiles are active: "database", "log", "local", "local-db", "local-log"
+[16:46:54.043][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:line138] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[16:46:54.101][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:line208] - Finished Spring Data repository scanning in 52 ms. Found 1 JPA repository interfaces.
+[16:46:54.481][INFO ][org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize:line108] - Tomcat initialized with port(s): 8080 (http)
+[16:46:54.487][INFO ][org.apache.catalina.core.StandardService.log:line173] - Starting service [Tomcat]
+[16:46:54.487][INFO ][org.apache.catalina.core.StandardEngine.log:line173] - Starting Servlet engine: [Apache Tomcat/10.1.15]
+[16:46:54.542][INFO ][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:line173] - Initializing Spring embedded WebApplicationContext
+[16:46:54.542][INFO ][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext:line291] - Root WebApplicationContext: initialization completed in 993 ms
+[16:46:54.612][INFO ][com.zaxxer.hikari.HikariDataSource.getConnection:line110] - HikariPool-1 - Starting...
+[16:46:54.821][INFO ][com.zaxxer.hikari.pool.HikariPool.checkFailFast:line565] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@35e74e08
+[16:46:54.822][INFO ][com.zaxxer.hikari.HikariDataSource.getConnection:line123] - HikariPool-1 - Start completed.
+[16:46:54.880][INFO ][org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:line31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+[16:46:54.911][INFO ][org.hibernate.Version.logVersion:line44] - HHH000412: Hibernate ORM core version 6.2.13.Final
+[16:46:54.913][INFO ][org.hibernate.cfg.Environment.<clinit>:line191] - HHH000406: Using bytecode reflection optimizer
+[16:46:55.099][INFO ][org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo.addTransformer:line87] - No LoadTimeWeaver setup: ignoring JPA class transformer
+[16:46:55.141][WARN ][org.hibernate.orm.deprecation.constructDialect:line152] - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[16:46:55.142][WARN ][org.hibernate.orm.deprecation.logSelectedDialect:line100] - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+[16:46:55.731][INFO ][org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator.initiateService:line55] - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[16:46:55.882][INFO ][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:line437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[16:46:56.129][WARN ][org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor:line231] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[16:46:56.143][WARN ][org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration.getOrDeducePassword:line87] - 
+
+Using generated security password: 61703150-8a04-44ed-9ab9-5e4a912a76de
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+[16:46:56.202][INFO ][org.springframework.security.web.DefaultSecurityFilterChain.<init>:line54] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@c040c8d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3453f79c, org.springframework.security.web.context.SecurityContextHolderFilter@1237aa73, org.springframework.security.web.header.HeaderWriterFilter@4509414e, org.springframework.security.web.authentication.logout.LogoutFilter@4193da4d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@60e5b3a8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3d5e3f58, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6f627a1a, org.springframework.security.web.access.ExceptionTranslationFilter@4131f6db, org.springframework.security.web.access.intercept.AuthorizationFilter@5c7b504]
+[16:46:56.648][INFO ][org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start:line220] - Tomcat started on port(s): 8080 (http) with context path ''
+[16:46:56.656][INFO ][org.dosopt.www.marketkurly.MarketKurlyApplication.logStarted:line57] - Started MarketKurlyApplication in 3.417 seconds (process running for 3.771)
+[17:45:22.386][INFO ][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.destroy:line650] - Closing JPA EntityManagerFactory for persistence unit 'default'
+[17:45:22.389][INFO ][com.zaxxer.hikari.HikariDataSource.close:line350] - HikariPool-1 - Shutdown initiated...
+[17:45:22.395][INFO ][com.zaxxer.hikari.HikariDataSource.close:line352] - HikariPool-1 - Shutdown completed.
+[17:45:24.410][INFO ][org.dosopt.www.marketkurly.MarketKurlyApplication.logStarting:line51] - Starting MarketKurlyApplication using Java 17.0.8.1 with PID 6759 (/Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly/build/classes/java/main started by dahyunkim in /Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly)
+[17:45:24.412][INFO ][org.dosopt.www.marketkurly.MarketKurlyApplication.logStartupProfileInfo:line644] - The following 5 profiles are active: "database", "log", "local", "local-db", "local-log"
+[17:45:24.957][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:line138] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[17:45:24.997][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:line208] - Finished Spring Data repository scanning in 36 ms. Found 1 JPA repository interfaces.
+[17:45:25.360][INFO ][org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize:line108] - Tomcat initialized with port(s): 8080 (http)
+[17:45:25.367][INFO ][org.apache.catalina.core.StandardService.log:line173] - Starting service [Tomcat]
+[17:45:25.367][INFO ][org.apache.catalina.core.StandardEngine.log:line173] - Starting Servlet engine: [Apache Tomcat/10.1.15]
+[17:45:25.420][INFO ][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:line173] - Initializing Spring embedded WebApplicationContext
+[17:45:25.421][INFO ][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext:line291] - Root WebApplicationContext: initialization completed in 984 ms
+[17:45:25.483][INFO ][com.zaxxer.hikari.HikariDataSource.getConnection:line110] - HikariPool-1 - Starting...
+[17:45:25.721][INFO ][com.zaxxer.hikari.pool.HikariPool.checkFailFast:line565] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7159d601
+[17:45:25.722][INFO ][com.zaxxer.hikari.HikariDataSource.getConnection:line123] - HikariPool-1 - Start completed.
+[17:45:25.788][INFO ][org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:line31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+[17:45:25.820][INFO ][org.hibernate.Version.logVersion:line44] - HHH000412: Hibernate ORM core version 6.2.13.Final
+[17:45:25.822][INFO ][org.hibernate.cfg.Environment.<clinit>:line191] - HHH000406: Using bytecode reflection optimizer
+[17:45:26.013][INFO ][org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo.addTransformer:line87] - No LoadTimeWeaver setup: ignoring JPA class transformer
+[17:45:26.062][WARN ][org.hibernate.orm.deprecation.constructDialect:line152] - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[17:45:26.063][WARN ][org.hibernate.orm.deprecation.logSelectedDialect:line100] - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+[17:45:26.650][INFO ][org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator.initiateService:line55] - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[17:45:26.767][INFO ][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:line437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[17:45:27.011][WARN ][org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor:line231] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[17:45:27.026][WARN ][org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration.getOrDeducePassword:line87] - 
+
+Using generated security password: 181ba069-14b5-419f-b0ad-8be6287b20ab
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+[17:45:27.086][INFO ][org.springframework.security.web.DefaultSecurityFilterChain.<init>:line54] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5c7b504, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@772589ed, org.springframework.security.web.context.SecurityContextHolderFilter@4509414e, org.springframework.security.web.header.HeaderWriterFilter@e8fb390, org.springframework.security.web.authentication.logout.LogoutFilter@1067192a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@78a0d664, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1e084a26, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4619854a, org.springframework.security.web.access.ExceptionTranslationFilter@31beb0d0, org.springframework.security.web.access.intercept.AuthorizationFilter@48b744fd]
+[17:45:27.645][INFO ][org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start:line220] - Tomcat started on port(s): 8080 (http) with context path ''
+[17:45:27.658][INFO ][org.dosopt.www.marketkurly.MarketKurlyApplication.logStarted:line57] - Started MarketKurlyApplication in 3.543 seconds (process running for 4.049)
+[19:26:49.001][INFO ][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.destroy:line650] - Closing JPA EntityManagerFactory for persistence unit 'default'
+[19:26:49.005][INFO ][com.zaxxer.hikari.HikariDataSource.close:line350] - HikariPool-1 - Shutdown initiated...
+[19:26:49.008][INFO ][com.zaxxer.hikari.HikariDataSource.close:line352] - HikariPool-1 - Shutdown completed.
+[19:33:43.677][INFO ][org.dosopt.www.marketkurly.MarketKurlyApplication.logStarting:line51] - Starting MarketKurlyApplication using Java 17.0.8.1 with PID 59844 (/Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly/build/classes/java/main started by dahyunkim in /Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly)
+[19:33:43.680][INFO ][org.dosopt.www.marketkurly.MarketKurlyApplication.logStartupProfileInfo:line644] - The following 5 profiles are active: "database", "log", "local", "local-db", "local-log"
+[19:33:44.200][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:line138] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[19:33:44.242][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:line208] - Finished Spring Data repository scanning in 37 ms. Found 1 JPA repository interfaces.
+[19:33:44.596][INFO ][org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize:line108] - Tomcat initialized with port(s): 8080 (http)
+[19:33:44.603][INFO ][org.apache.catalina.core.StandardService.log:line173] - Starting service [Tomcat]
+[19:33:44.603][INFO ][org.apache.catalina.core.StandardEngine.log:line173] - Starting Servlet engine: [Apache Tomcat/10.1.15]
+[19:33:44.657][INFO ][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:line173] - Initializing Spring embedded WebApplicationContext
+[19:33:44.657][INFO ][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext:line291] - Root WebApplicationContext: initialization completed in 953 ms
+[19:33:44.723][INFO ][com.zaxxer.hikari.HikariDataSource.getConnection:line110] - HikariPool-1 - Starting...
+[19:33:44.931][INFO ][com.zaxxer.hikari.pool.HikariPool.checkFailFast:line565] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@410fc508
+[19:33:44.933][INFO ][com.zaxxer.hikari.HikariDataSource.getConnection:line123] - HikariPool-1 - Start completed.
+[19:33:44.992][INFO ][org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:line31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+[19:33:45.023][INFO ][org.hibernate.Version.logVersion:line44] - HHH000412: Hibernate ORM core version 6.2.13.Final
+[19:33:45.025][INFO ][org.hibernate.cfg.Environment.<clinit>:line191] - HHH000406: Using bytecode reflection optimizer
+[19:33:45.214][INFO ][org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo.addTransformer:line87] - No LoadTimeWeaver setup: ignoring JPA class transformer
+[19:33:45.255][WARN ][org.hibernate.orm.deprecation.constructDialect:line152] - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[19:33:45.256][WARN ][org.hibernate.orm.deprecation.logSelectedDialect:line100] - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+[19:33:45.842][INFO ][org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator.initiateService:line55] - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[19:33:45.951][INFO ][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:line437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[19:33:46.197][WARN ][org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor:line231] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[19:33:46.211][WARN ][org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration.getOrDeducePassword:line87] - 
+
+Using generated security password: 9c8fe44b-d1f5-4b65-8aa9-386817eff090
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+[19:33:46.274][INFO ][org.springframework.security.web.DefaultSecurityFilterChain.<init>:line54] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@655b9169, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4917992b, org.springframework.security.web.context.SecurityContextHolderFilter@1e084a26, org.springframework.security.web.header.HeaderWriterFilter@1237aa73, org.springframework.security.web.authentication.logout.LogoutFilter@7be3a837, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@70ebaa1e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@65dafe50, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@62536882, org.springframework.security.web.access.ExceptionTranslationFilter@36e9794c, org.springframework.security.web.access.intercept.AuthorizationFilter@c040c8d]
+[19:33:46.814][INFO ][org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start:line220] - Tomcat started on port(s): 8080 (http) with context path ''
+[19:33:46.824][INFO ][org.dosopt.www.marketkurly.MarketKurlyApplication.logStarted:line57] - Started MarketKurlyApplication in 3.449 seconds (process running for 3.846)
+[19:35:00.938][INFO ][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.destroy:line650] - Closing JPA EntityManagerFactory for persistence unit 'default'
+[19:35:00.940][INFO ][com.zaxxer.hikari.HikariDataSource.close:line350] - HikariPool-1 - Shutdown initiated...
+[19:35:00.945][INFO ][com.zaxxer.hikari.HikariDataSource.close:line352] - HikariPool-1 - Shutdown completed.
+[19:35:15.069][INFO ][org.dosopt.www.marketkurly.MarketKurlyApplication.logStarting:line51] - Starting MarketKurlyApplication using Java 17.0.8.1 with PID 60643 (/Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly/build/classes/java/main started by dahyunkim in /Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly)
+[19:35:15.071][INFO ][org.dosopt.www.marketkurly.MarketKurlyApplication.logStartupProfileInfo:line644] - The following 5 profiles are active: "database", "log", "local", "local-db", "local-log"
+[19:35:15.595][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:line138] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[19:35:15.636][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:line208] - Finished Spring Data repository scanning in 36 ms. Found 1 JPA repository interfaces.
+[19:35:15.993][INFO ][org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize:line108] - Tomcat initialized with port(s): 8080 (http)
+[19:35:15.999][INFO ][org.apache.catalina.core.StandardService.log:line173] - Starting service [Tomcat]
+[19:35:15.999][INFO ][org.apache.catalina.core.StandardEngine.log:line173] - Starting Servlet engine: [Apache Tomcat/10.1.15]
+[19:35:16.052][INFO ][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:line173] - Initializing Spring embedded WebApplicationContext
+[19:35:16.052][INFO ][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext:line291] - Root WebApplicationContext: initialization completed in 957 ms
+[19:35:16.118][INFO ][com.zaxxer.hikari.HikariDataSource.getConnection:line110] - HikariPool-1 - Starting...
+[19:35:16.329][INFO ][com.zaxxer.hikari.pool.HikariPool.checkFailFast:line565] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@63f9ddf9
+[19:35:16.331][INFO ][com.zaxxer.hikari.HikariDataSource.getConnection:line123] - HikariPool-1 - Start completed.
+[19:35:16.389][INFO ][org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:line31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+[19:35:16.421][INFO ][org.hibernate.Version.logVersion:line44] - HHH000412: Hibernate ORM core version 6.2.13.Final
+[19:35:16.423][INFO ][org.hibernate.cfg.Environment.<clinit>:line191] - HHH000406: Using bytecode reflection optimizer
+[19:35:16.608][INFO ][org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo.addTransformer:line87] - No LoadTimeWeaver setup: ignoring JPA class transformer
+[19:35:16.655][WARN ][org.hibernate.orm.deprecation.constructDialect:line152] - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[19:35:16.656][WARN ][org.hibernate.orm.deprecation.logSelectedDialect:line100] - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+[19:35:17.248][INFO ][org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator.initiateService:line55] - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[19:35:17.358][INFO ][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:line437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[19:35:17.610][WARN ][org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor:line231] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[19:35:17.625][WARN ][org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration.getOrDeducePassword:line87] - 
+
+Using generated security password: d805d0f0-dc51-4259-a9fe-d1cb3e3a8569
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+[19:35:17.687][INFO ][org.springframework.security.web.DefaultSecurityFilterChain.<init>:line54] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6f627a1a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@655b9169, org.springframework.security.web.context.SecurityContextHolderFilter@60e5b3a8, org.springframework.security.web.header.HeaderWriterFilter@78a0d664, org.springframework.security.web.authentication.logout.LogoutFilter@2ac0cb64, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@31c31fa6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@48cc060d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4917992b, org.springframework.security.web.access.ExceptionTranslationFilter@4509414e, org.springframework.security.web.access.intercept.AuthorizationFilter@4619854a]
+[19:35:18.190][INFO ][org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start:line220] - Tomcat started on port(s): 8080 (http) with context path ''
+[19:35:18.199][INFO ][org.dosopt.www.marketkurly.MarketKurlyApplication.logStarted:line57] - Started MarketKurlyApplication in 3.422 seconds (process running for 3.957)
+[19:41:40.353][INFO ][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.destroy:line650] - Closing JPA EntityManagerFactory for persistence unit 'default'
+[19:41:40.357][INFO ][com.zaxxer.hikari.HikariDataSource.close:line350] - HikariPool-1 - Shutdown initiated...
+[19:41:40.363][INFO ][com.zaxxer.hikari.HikariDataSource.close:line352] - HikariPool-1 - Shutdown completed.
+[19:48:31.405][INFO ][org.dosopt.www.marketkurly.MarketKurlyApplication.logStarting:line51] - Starting MarketKurlyApplication using Java 17.0.8.1 with PID 67215 (/Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly/build/classes/java/main started by dahyunkim in /Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly)
+[19:48:31.407][INFO ][org.dosopt.www.marketkurly.MarketKurlyApplication.logStartupProfileInfo:line644] - The following 5 profiles are active: "database", "log", "local", "local-db", "local-log"
+[19:48:31.934][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:line138] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[19:48:31.969][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:line208] - Finished Spring Data repository scanning in 31 ms. Found 1 JPA repository interfaces.
+[19:48:32.332][INFO ][org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize:line108] - Tomcat initialized with port(s): 8080 (http)
+[19:48:32.339][INFO ][org.apache.catalina.core.StandardService.log:line173] - Starting service [Tomcat]
+[19:48:32.339][INFO ][org.apache.catalina.core.StandardEngine.log:line173] - Starting Servlet engine: [Apache Tomcat/10.1.15]
+[19:48:32.393][INFO ][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:line173] - Initializing Spring embedded WebApplicationContext
+[19:48:32.393][INFO ][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext:line291] - Root WebApplicationContext: initialization completed in 952 ms
+[19:48:32.495][INFO ][org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:line31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+[19:48:32.527][INFO ][org.hibernate.Version.logVersion:line44] - HHH000412: Hibernate ORM core version 6.2.13.Final
+[19:48:32.529][INFO ][org.hibernate.cfg.Environment.<clinit>:line191] - HHH000406: Using bytecode reflection optimizer
+[19:48:32.713][INFO ][org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo.addTransformer:line87] - No LoadTimeWeaver setup: ignoring JPA class transformer
+[19:48:32.729][INFO ][com.zaxxer.hikari.HikariDataSource.getConnection:line110] - HikariPool-1 - Starting...
+[19:48:32.929][INFO ][com.zaxxer.hikari.pool.HikariPool.checkFailFast:line565] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5f3f57ff
+[19:48:32.930][INFO ][com.zaxxer.hikari.HikariDataSource.getConnection:line123] - HikariPool-1 - Start completed.
+[19:48:32.964][WARN ][org.hibernate.orm.deprecation.constructDialect:line152] - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[19:48:32.965][WARN ][org.hibernate.orm.deprecation.logSelectedDialect:line100] - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+[19:48:33.562][INFO ][org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator.initiateService:line55] - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[19:48:33.679][INFO ][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:line437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[19:48:33.930][WARN ][org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor:line231] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[19:48:33.944][WARN ][org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration.getOrDeducePassword:line87] - 
+
+Using generated security password: 50853be2-550d-4003-a4e6-ea41cc5da7fb
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+[19:48:34.007][INFO ][org.springframework.security.web.DefaultSecurityFilterChain.<init>:line54] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@554a2f3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4b8601a1, org.springframework.security.web.context.SecurityContextHolderFilter@7adde776, org.springframework.security.web.header.HeaderWriterFilter@6a827b0c, org.springframework.security.web.authentication.logout.LogoutFilter@108d59b6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4ae435a3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@77f95e19, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3f7a7ce6, org.springframework.security.web.access.ExceptionTranslationFilter@7a41f4a7, org.springframework.security.web.access.intercept.AuthorizationFilter@5a2297d7]
+[19:48:34.465][INFO ][org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start:line220] - Tomcat started on port(s): 8080 (http) with context path ''
+[19:48:34.473][INFO ][org.dosopt.www.marketkurly.MarketKurlyApplication.logStarted:line57] - Started MarketKurlyApplication in 3.388 seconds (process running for 4.093)
+[19:51:05.587][INFO ][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.destroy:line650] - Closing JPA EntityManagerFactory for persistence unit 'default'
+[19:51:05.590][INFO ][com.zaxxer.hikari.HikariDataSource.close:line350] - HikariPool-1 - Shutdown initiated...
+[19:51:05.596][INFO ][com.zaxxer.hikari.HikariDataSource.close:line352] - HikariPool-1 - Shutdown completed.
+[19:51:07.571][INFO ][org.dosopt.www.marketkurly.MarketKurlyApplication.logStarting:line51] - Starting MarketKurlyApplication using Java 17.0.8.1 with PID 68556 (/Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly/build/classes/java/main started by dahyunkim in /Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly)
+[19:51:07.574][INFO ][org.dosopt.www.marketkurly.MarketKurlyApplication.logStartupProfileInfo:line644] - The following 5 profiles are active: "database", "log", "local", "local-db", "local-log"
+[19:51:08.104][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:line138] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[19:51:08.143][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:line208] - Finished Spring Data repository scanning in 35 ms. Found 1 JPA repository interfaces.
+[19:51:08.502][INFO ][org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize:line108] - Tomcat initialized with port(s): 8080 (http)
+[19:51:08.509][INFO ][org.apache.catalina.core.StandardService.log:line173] - Starting service [Tomcat]
+[19:51:08.509][INFO ][org.apache.catalina.core.StandardEngine.log:line173] - Starting Servlet engine: [Apache Tomcat/10.1.15]
+[19:51:08.563][INFO ][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:line173] - Initializing Spring embedded WebApplicationContext
+[19:51:08.563][INFO ][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext:line291] - Root WebApplicationContext: initialization completed in 956 ms
+[19:51:08.660][INFO ][org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:line31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+[19:51:08.692][INFO ][org.hibernate.Version.logVersion:line44] - HHH000412: Hibernate ORM core version 6.2.13.Final
+[19:51:08.694][INFO ][org.hibernate.cfg.Environment.<clinit>:line191] - HHH000406: Using bytecode reflection optimizer
+[19:51:08.876][INFO ][org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo.addTransformer:line87] - No LoadTimeWeaver setup: ignoring JPA class transformer
+[19:51:08.891][INFO ][com.zaxxer.hikari.HikariDataSource.getConnection:line110] - HikariPool-1 - Starting...
+[19:51:09.089][INFO ][com.zaxxer.hikari.pool.HikariPool.checkFailFast:line565] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1e6cb932
+[19:51:09.090][INFO ][com.zaxxer.hikari.HikariDataSource.getConnection:line123] - HikariPool-1 - Start completed.
+[19:51:09.125][WARN ][org.hibernate.orm.deprecation.constructDialect:line152] - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[19:51:09.125][WARN ][org.hibernate.orm.deprecation.logSelectedDialect:line100] - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+[19:51:09.727][INFO ][org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator.initiateService:line55] - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[19:51:09.845][INFO ][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:line437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[19:51:10.103][WARN ][org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor:line231] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[19:51:10.124][WARN ][org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration.getOrDeducePassword:line87] - 
+
+Using generated security password: 04693adc-443d-4a30-aee8-9b6be23b1c0f
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+[19:51:10.206][INFO ][org.springframework.security.web.DefaultSecurityFilterChain.<init>:line54] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@60e5b3a8, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1e084a26, org.springframework.security.web.context.SecurityContextHolderFilter@6da86e98, org.springframework.security.web.header.HeaderWriterFilter@5c8d685e, org.springframework.security.web.authentication.logout.LogoutFilter@715d82a0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@476dc0af, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@25630ede, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@31c31fa6, org.springframework.security.web.access.ExceptionTranslationFilter@3cd758be, org.springframework.security.web.access.intercept.AuthorizationFilter@78a0d664]
+[19:51:10.946][INFO ][org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start:line220] - Tomcat started on port(s): 8080 (http) with context path ''
+[19:51:10.955][INFO ][org.dosopt.www.marketkurly.MarketKurlyApplication.logStarted:line57] - Started MarketKurlyApplication in 3.692 seconds (process running for 4.359)
+[19:51:35.786][INFO ][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.destroy:line650] - Closing JPA EntityManagerFactory for persistence unit 'default'
+[19:51:35.788][INFO ][com.zaxxer.hikari.HikariDataSource.close:line350] - HikariPool-1 - Shutdown initiated...
+[19:51:35.792][INFO ][com.zaxxer.hikari.HikariDataSource.close:line352] - HikariPool-1 - Shutdown completed.
+[19:51:37.624][INFO ][org.dosopt.www.marketkurly.MarketKurlyApplication.logStarting:line51] - Starting MarketKurlyApplication using Java 17.0.8.1 with PID 68834 (/Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly/build/classes/java/main started by dahyunkim in /Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly)
+[19:51:37.626][INFO ][org.dosopt.www.marketkurly.MarketKurlyApplication.logStartupProfileInfo:line644] - The following 5 profiles are active: "database", "log", "local", "local-db", "local-log"
+[19:51:38.150][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:line138] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[19:51:38.193][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:line208] - Finished Spring Data repository scanning in 38 ms. Found 1 JPA repository interfaces.
+[19:51:38.561][INFO ][org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize:line108] - Tomcat initialized with port(s): 8080 (http)
+[19:51:38.567][INFO ][org.apache.catalina.core.StandardService.log:line173] - Starting service [Tomcat]
+[19:51:38.568][INFO ][org.apache.catalina.core.StandardEngine.log:line173] - Starting Servlet engine: [Apache Tomcat/10.1.15]
+[19:51:38.622][INFO ][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:line173] - Initializing Spring embedded WebApplicationContext
+[19:51:38.622][INFO ][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext:line291] - Root WebApplicationContext: initialization completed in 971 ms
+[19:51:38.718][INFO ][org.hibernate.jpa.internal.util.LogHelper.logPersistenceUnitInformation:line31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+[19:51:38.750][INFO ][org.hibernate.Version.logVersion:line44] - HHH000412: Hibernate ORM core version 6.2.13.Final
+[19:51:38.752][INFO ][org.hibernate.cfg.Environment.<clinit>:line191] - HHH000406: Using bytecode reflection optimizer
+[19:51:38.933][INFO ][org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo.addTransformer:line87] - No LoadTimeWeaver setup: ignoring JPA class transformer
+[19:51:38.949][INFO ][com.zaxxer.hikari.HikariDataSource.getConnection:line110] - HikariPool-1 - Starting...
+[19:51:39.152][INFO ][com.zaxxer.hikari.pool.HikariPool.checkFailFast:line565] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@45424c0
+[19:51:39.154][INFO ][com.zaxxer.hikari.HikariDataSource.getConnection:line123] - HikariPool-1 - Start completed.
+[19:51:39.186][WARN ][org.hibernate.orm.deprecation.constructDialect:line152] - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[19:51:39.187][WARN ][org.hibernate.orm.deprecation.logSelectedDialect:line100] - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+[19:51:39.784][INFO ][org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator.initiateService:line55] - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[19:51:39.884][INFO ][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory:line437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[19:51:40.133][WARN ][org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor:line231] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[19:51:40.147][WARN ][org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration.getOrDeducePassword:line87] - 
+
+Using generated security password: c2c97e6a-76a5-490b-86b8-1a6b38b9d00c
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+[19:51:40.205][INFO ][org.springframework.security.web.DefaultSecurityFilterChain.<init>:line54] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@48cc060d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@65dafe50, org.springframework.security.web.context.SecurityContextHolderFilter@25630ede, org.springframework.security.web.header.HeaderWriterFilter@797ca322, org.springframework.security.web.authentication.logout.LogoutFilter@5cdf61d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@18c432ed, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6956081d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@29b2a94c, org.springframework.security.web.access.ExceptionTranslationFilter@5a5024eb, org.springframework.security.web.access.intercept.AuthorizationFilter@70ebaa1e]
+[19:51:40.630][WARN ][org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext.refresh:line624] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute SQL script statement #2 of file [/Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly/build/resources/main/data.sql]: INSERT INTO product(id, product_name, price, imageurl, discount_rate, delivery_type, seller_id, created_at, updated_at) VALUES (null, '[전주 베테랑] 칼국수', 5000, 'https://insopt-seminar3.s3.ap-northeast-2.amazonaws.com/marketKurly/kurly1.png', 20, '샛별배송', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP )
+[19:51:40.632][INFO ][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.destroy:line650] - Closing JPA EntityManagerFactory for persistence unit 'default'
+[19:51:40.633][INFO ][com.zaxxer.hikari.HikariDataSource.close:line350] - HikariPool-1 - Shutdown initiated...
+[19:51:40.639][INFO ][com.zaxxer.hikari.HikariDataSource.close:line352] - HikariPool-1 - Shutdown completed.
+[19:51:40.640][INFO ][org.apache.catalina.core.StandardService.log:line173] - Stopping service [Tomcat]
+[19:51:40.649][INFO ][org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger.logMessage:line82] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[19:51:40.660][ERROR][org.springframework.boot.SpringApplication.reportFailure:line824] - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute SQL script statement #2 of file [/Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly/build/resources/main/data.sql]: INSERT INTO product(id, product_name, price, imageurl, discount_rate, delivery_type, seller_id, created_at, updated_at) VALUES (null, '[전주 베테랑] 칼국수', 5000, 'https://insopt-seminar3.s3.ap-northeast-2.amazonaws.com/marketKurly/kurly1.png', 20, '샛별배송', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP )
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:312)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:950)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:616)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:738)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:440)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at org.dosopt.www.marketkurly.MarketKurlyApplication.main(MarketKurlyApplication.java:10)
+Caused by: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #2 of file [/Users/dahyunkim/Desktop/PROJECT/SpringBoot/MarketKurly/build/resources/main/data.sql]: INSERT INTO product(id, product_name, price, imageurl, discount_rate, delivery_type, seller_id, created_at, updated_at) VALUES (null, '[전주 베테랑] 칼국수', 5000, 'https://insopt-seminar3.s3.ap-northeast-2.amazonaws.com/marketKurly/kurly1.png', 20, '샛별배송', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP )
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282)
+	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254)
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:54)
+	at org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer.runScripts(DataSourceScriptDatabaseInitializer.java:87)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.runScripts(AbstractScriptDatabaseInitializer.java:146)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyScripts(AbstractScriptDatabaseInitializer.java:108)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyDataScripts(AbstractScriptDatabaseInitializer.java:102)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.initializeDatabase(AbstractScriptDatabaseInitializer.java:77)
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.afterPropertiesSet(AbstractScriptDatabaseInitializer.java:66)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	... 18 common frames omitted
+Caused by: java.sql.SQLException: Data truncated for column 'delivery_type' at row 1
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:130)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261)
+	... 28 common frames omitted

@@ -12,6 +12,7 @@ public enum ResultCode {
 
    // PRODUCT 관련
    GET_PRODUCT_SUCCESS(HttpStatus.OK, "상품 조회 성공"),
+   GET_SIMILAR_PRODUCT_SUCCESS(HttpStatus.OK, "연관 상품 조회 성공"),
    ;
 
    private final HttpStatus status;

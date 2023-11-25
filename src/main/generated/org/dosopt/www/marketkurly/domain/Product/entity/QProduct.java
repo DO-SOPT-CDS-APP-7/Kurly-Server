@@ -22,7 +22,7 @@ public class QProduct extends EntityPathBase<Product> {
 
     public static final QProduct product = new QProduct("product");
 
-    public final org.dosopt.www.marketkurly.global.domain.QBaseEntity _super = new org.dosopt.www.marketkurly.global.domain.QBaseEntity(this);
+    public final org.dosopt.www.marketkurly.global.entity.QBaseEntity _super = new org.dosopt.www.marketkurly.global.entity.QBaseEntity(this);
 
     //inherited
     public final DateTimePath<java.time.LocalDateTime> createdAt = _super.createdAt;
@@ -40,6 +40,8 @@ public class QProduct extends EntityPathBase<Product> {
     public final StringPath productName = createString("productName");
 
     public final QSeller seller;
+
+    public final QSubCategory subCategory;
 
     //inherited
     public final DateTimePath<java.time.LocalDateTime> updatedAt = _super.updatedAt;
@@ -63,6 +65,7 @@ public class QProduct extends EntityPathBase<Product> {
     public QProduct(Class<? extends Product> type, PathMetadata metadata, PathInits inits) {
         super(type, metadata, inits);
         this.seller = inits.isInitialized("seller") ? new QSeller(forProperty("seller")) : null;
+        this.subCategory = inits.isInitialized("subCategory") ? new QSubCategory(forProperty("subCategory"), inits.get("subCategory")) : null;
     }
 
 }
