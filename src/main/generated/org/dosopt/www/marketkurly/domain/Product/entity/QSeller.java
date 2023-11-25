@@ -19,7 +19,7 @@ public class QSeller extends EntityPathBase<Seller> {
 
     public static final QSeller seller = new QSeller("seller");
 
-    public final org.dosopt.www.marketkurly.global.domain.QBaseEntity _super = new org.dosopt.www.marketkurly.global.domain.QBaseEntity(this);
+    public final org.dosopt.www.marketkurly.global.entity.QBaseEntity _super = new org.dosopt.www.marketkurly.global.entity.QBaseEntity(this);
 
     //inherited
     public final DateTimePath<java.time.LocalDateTime> createdAt = _super.createdAt;
