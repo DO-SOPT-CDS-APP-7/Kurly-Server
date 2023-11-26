@@ -15,7 +15,8 @@ public enum CustomErrorCode {
    USER_NOT_FOUND(HttpStatus.BAD_REQUEST, "존재하지 않는 유저입니다."),
 
    // CART
-   CART_NOT_FOUND(HttpStatus.BAD_REQUEST, "장바구니가 존재하지 않습니다.");
+   CART_NOT_FOUND(HttpStatus.BAD_REQUEST, "장바구니가 존재하지 않습니다."),
+   CARTITEM_NOT_FOUND(HttpStatus.BAD_REQUEST, "장바구니에 담긴 상품이 존재하지 않습니다.");
 
    private final HttpStatus status;
    private final String message;

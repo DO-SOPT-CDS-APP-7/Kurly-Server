@@ -30,5 +30,13 @@ public class CartItemRepositoryImpl implements CartCustomRepository {
                 .fetch();
         }
 
+    @Override
+    public void deleteAllByCart_Id(Long cartId) {
+        jpaQueryFactory
+                .delete(cartItem)
+                .where(cartItem.cart.id.eq(cartId))
+                .execute();
+    }
+
 
 }
