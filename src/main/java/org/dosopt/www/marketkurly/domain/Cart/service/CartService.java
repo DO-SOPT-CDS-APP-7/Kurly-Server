@@ -8,7 +8,7 @@ import org.dosopt.www.marketkurly.domain.Cart.entity.CartItem;
 import org.dosopt.www.marketkurly.domain.Cart.repository.CartItemRepository;
 import org.dosopt.www.marketkurly.domain.Cart.repository.CartRepository;
 import org.dosopt.www.marketkurly.domain.Product.entity.Product;
-import org.dosopt.www.marketkurly.domain.Product.repository.ProductJpaRepository;
+import org.dosopt.www.marketkurly.domain.Product.repository.ProductRepository;
 import org.dosopt.www.marketkurly.domain.User.UserJpaRepository;
 import org.dosopt.www.marketkurly.domain.User.entity.User;
 import org.dosopt.www.marketkurly.global.error.CustomErrorCode;
@@ -23,14 +23,14 @@ import java.util.List;
 @RequiredArgsConstructor
 @Transactional
 public class CartService {
-    private final ProductJpaRepository productJpaRepository;
+    private final ProductRepository productRepository;
     private final CartRepository cartRepository;
     private final CartItemRepository cartItemRepository;
     private final UserJpaRepository userJpaRepository;
     final int freeShippingPrice = 50000;
 
     public Long addCart(CartItemAddRequest cartRequest, Long userId){
-        Product product = productJpaRepository.findByIdOrElseThrow(cartRequest.getProductId());
+        Product product = productRepository.findByIdOrElseThrow(cartRequest.getProductId());
         User user = userJpaRepository.findByIdOrElseThrow(userId);
         Cart cart = cartRepository.findByUserId(userId);
 

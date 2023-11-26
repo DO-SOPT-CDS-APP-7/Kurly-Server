@@ -12,9 +12,9 @@ public enum ResultCode {
 
    // PRODUCT 관련
    GET_PRODUCT_SUCCESS(HttpStatus.OK, "상품 조회 성공"),
+   GET_SIMILAR_PRODUCT_SUCCESS(HttpStatus.OK, "연관 상품 조회 성공"),
 
-
-   // Cart 관련
+   // Cart 관련,
    CREATE_CART_SUCCESS(HttpStatus.OK, "장바구니 추가 성공"),
    GET_CARTITEMS_SUCCESS(HttpStatus.OK, "장바구니 상품 조회 성공"),
    GET_FREESHIPPINGPRICE_SUCCESS(HttpStatus.OK, "무료배송 가격 알림 성공");
