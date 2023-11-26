@@ -1,7 +1,8 @@
 package org.dosopt.www.marketkurly.domain.Cart.repository;
 import org.dosopt.www.marketkurly.domain.Cart.entity.Cart;
+import org.dosopt.www.marketkurly.domain.Cart.querydsl.CartCustomRepository;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface CartJpaRepository extends JpaRepository<Cart, Long> {
+public interface CartRepository extends JpaRepository<Cart, Long> {
     Cart findByUserId(Long userId);
 }
