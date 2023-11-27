@@ -3,6 +3,7 @@ package org.dosopt.www.marketkurly.domain.Product.repository;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import lombok.RequiredArgsConstructor;
 import static org.dosopt.www.marketkurly.domain.Product.entity.QProduct.product;
+import static org.dosopt.www.marketkurly.domain.Product.entity.QCategory.category;
 
 import org.dosopt.www.marketkurly.domain.Product.entity.Category;
 import org.dosopt.www.marketkurly.domain.Product.entity.Product;
@@ -24,23 +25,25 @@ public class ProductRepositoryImpl implements ProductCustomRepository {
    private static final int subCategoryCount = 3;
 
    @Override
-   public List<Product> searchByCategory(Category category, Pageable pageable) {
+   public List<Product> searchByCategory(Long productId, Category category, Pageable pageable) {
       return jpaQueryFactory
                .selectFrom(product)
-               .where(product.subCategory.category.categoryType.eq(category.getCategoryType()))
+               .where(product.subCategory.category.categoryType.eq(category.getCategoryType())
+                     .and(product.id.ne(productId)))
                .orderBy(product.updatedAt.desc())
                .offset(pageable.getOffset())
-               .limit(pageable.getPageSize() + 1)
+               .limit(pageable.getPageSize())
                .fetch();
    }
 
    @Override
-   public List<Product> searchBySubCategory(SubCategory subCategory) {
+   public List<Product> searchBySubCategory(Long productId, SubCategory subCategory) {
       return jpaQueryFactory
                .selectFrom(product)
-               .where(product.subCategory.subCategoryType.eq(subCategory.getSubCategoryType()))
+               .where(product.subCategory.subCategoryType.eq(subCategory.getSubCategoryType())
+                     .and(product.id.ne(productId)))
                .orderBy(product.updatedAt.desc())
-               .limit(subCategoryCount + 1)
+               .limit(subCategoryCount)
                .fetch();
    }
 }
