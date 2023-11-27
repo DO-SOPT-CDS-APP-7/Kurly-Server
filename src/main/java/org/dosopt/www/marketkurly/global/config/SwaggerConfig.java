@@ -14,7 +14,8 @@ import java.util.List;
                   description = "Market Kurly API 명세서",
                   version = "v1"),
       servers = { @Server(url = "https://api.dosopt-kurly.store", description = "배포용"),
-                  @Server(url = "http://localhost:8080", description = "로컬용") } )
+                  @Server(url = "http://localhost:8080", description = "로컬용") }
+)
 @Configuration
 public class SwaggerConfig {
 }
