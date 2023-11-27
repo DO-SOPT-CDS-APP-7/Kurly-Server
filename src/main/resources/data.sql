@@ -13,9 +13,6 @@ INSERT IGNORE INTO sub_category(category_id, sub_category_type) values (1, 'FLOU
 INSERT IGNORE INTO sub_category(category_id, sub_category_type) values (2, 'SWEET_POTATO_CARROT');
 INSERT IGNORE INTO sub_category(category_id, sub_category_type) values (2, 'BROCOLLI_PAPRIKA_CABBAGE');
 
-INSERT IGNORE INTO product(id, product_name, price, imageurl, discount_rate, delivery_type, seller_id, created_at, updated_at, sub_category_id)
-VALUES
-=======
 INSERT IGNORE INTO user(user_id, nickname, address)
 VALUES
     (1, '유저1', '서울시 광진구 능동로 120 건국대학교');
@@ -80,8 +77,3 @@ INSERT IGNORE INTO product(id, product_name, price, imageurl, discount_rate, del
 VALUES
     (12, '다른서브카테고리예시', 21200, 'https://insopt-seminar3.s3.ap-northeast-2.amazonaws.com/marketKurly/kurly10.svg',
     5, 'SAME_DAY', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, 4);
-
-
-INSERT IGNORE INTO user(nickname, address)
-values ('차은우', '서울시 광진구 능동로 120 건국대학교');
-
