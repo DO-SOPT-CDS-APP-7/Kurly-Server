@@ -11,6 +11,6 @@ import java.util.Arrays;
 import java.util.List;
 
 public interface ProductCustomRepository {
-   List<Product> searchByCategory(Category category, Pageable pageable);
-   List<Product> searchBySubCategory(SubCategory productSubCategory);
+   List<Product> searchByCategory(Long productId, Category category, Pageable pageable);
+   List<Product> searchBySubCategory(Long productId, SubCategory productSubCategory);
 }
