@@ -11,7 +11,7 @@ public record SimilarProductGetResponse(
       String productName,
       @Schema(description = "원가")
       Integer originalPrice,
-      @Schema(description = "상품 이미지")
+      @Schema(description = "상품 이미지", nullable = true)
       String imageURL
 ) {
    public static SimilarProductGetResponse of (Product product) {

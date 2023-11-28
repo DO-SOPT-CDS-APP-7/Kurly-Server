@@ -25,7 +25,7 @@ public class CartItemGetResponse {
     @Schema(description = "할인율")
     Integer discountRate;
 
-    @Schema(description = "상품 이미지")
+    @Schema(description = "상품 이미지", nullable = true)
     String imageURL;
 
     @Schema(description = "담은 개수")

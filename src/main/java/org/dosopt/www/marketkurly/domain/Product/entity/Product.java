@@ -1,5 +1,6 @@
 package org.dosopt.www.marketkurly.domain.Product.entity;
 
+import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -17,6 +18,7 @@ public class Product extends BaseEntity {
 
    private Integer price;
 
+   @Nullable
    private String imageURL;
 
    private Integer discountRate;

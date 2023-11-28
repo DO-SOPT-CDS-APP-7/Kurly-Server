@@ -15,11 +15,11 @@ public record ProductGetResponse (
       Integer discountRate,
       @Schema(description = "원가")
       Integer originalPrice,
-      @Schema(description = "할인된 금액(원)")
+      @Schema(description = "할인된 금액(원)", nullable = true)
       String discountedPrice,
       @Schema(description = "판매자명")
       String sellerName,
-      @Schema(description = "상품 이미지")
+      @Schema(description = "상품 이미지", nullable = true)
       String imageURL
 ) {
    public static ProductGetResponse of (Product product) {
