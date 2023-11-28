@@ -57,7 +57,7 @@ public class CartService {
         cartItemRepository.deleteAllByCart_Id(cartId);
     }
 
-    public String getFreeShippingPrice(Long cartId){
+    public Integer getFreeShippingPrice(Long cartId){
         int totalPrice = 0;
         int remainPrice = 0;
         //장바구니에 담은 상품이 없는 경우, default 값인 50000원 반환
@@ -68,8 +68,9 @@ public class CartService {
         }
 
         remainPrice = freeShippingPrice - totalPrice;
-        if(remainPrice>0) return new DecimalFormat("#,###원").format(remainPrice);
-        return "0원";
+
+        // if(remainPrice>0) return new DecimalFormat("#,###원").format(remainPrice);
+        return remainPrice > 0 ? remainPrice : 0;
     }
 
     /*QueryDsl*/

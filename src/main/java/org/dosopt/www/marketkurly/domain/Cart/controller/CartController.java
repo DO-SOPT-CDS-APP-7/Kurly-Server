@@ -64,7 +64,7 @@ public class CartController {
             description = "사용자가 무료배송을 하기 위해 더 구매해야 할 상품의 가격을 알려줍니다.",
             parameters = {@Parameter(name="X-Auth-id", description = "장바구니 ID", in = ParameterIn.HEADER, schema = @Schema(defaultValue = "1"))})
     @GetMapping("/free-shipping")
-    public ResultResponse<String> getFreeShippingPrice(@RequestHeader(CUSTOM_AUTH_ID) Long cartId){
+    public ResultResponse<Integer> getFreeShippingPrice(@RequestHeader(CUSTOM_AUTH_ID) Long cartId){
         return ResultResponse.of(ResultCode.GET_FREESHIPPINGPRICE_SUCCESS, cartService.getFreeShippingPrice(cartId));
     }
 
