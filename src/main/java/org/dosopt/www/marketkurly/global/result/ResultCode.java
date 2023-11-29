@@ -17,6 +17,7 @@ public enum ResultCode {
    // Cart 관련,
    CREATE_CART_SUCCESS(HttpStatus.OK, "장바구니 추가 성공"),
    GET_CARTITEMS_SUCCESS(HttpStatus.OK, "장바구니 상품 조회 성공"),
+   DELETE_CART_SUCCESS(HttpStatus.OK, "장바구니 초기화 성공"),
    GET_FREESHIPPINGPRICE_SUCCESS(HttpStatus.OK, "무료배송 가격 알림 성공");
 
    private final HttpStatus status;
