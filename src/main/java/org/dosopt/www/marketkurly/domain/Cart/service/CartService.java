@@ -53,14 +53,13 @@ public class CartService {
 
     @Transactional
     public void deleteCartItems(Long cartId){
-        if(cartItemRepository.findByCartId(cartId) == null)
+        if(cartRepository.findById(cartId) == null)
                 throw new CartException(CustomErrorCode.CARTITEM_NOT_FOUND);
         cartItemRepository.deleteAllByCart_Id(cartId);
     }
 
     @Transactional
     public Integer getFreeShippingPrice(Long userId){
-
         int totalPrice = 0;
         int remainPrice = 0;
         //장바구니에 담은 상품이 없는 경우, default 값인 50000원 반환
@@ -80,7 +79,7 @@ public class CartService {
     /*QueryDsl*/
     @Transactional
     public List<CartItemGetResponse> findCartItems(Long cartId){
-        if(cartItemRepository.findByCartId(cartId) == null)
+        if(cartRepository.findById(cartId) == null)
             throw new CartException(CustomErrorCode.CART_NOT_FOUND);
 
         return cartItemRepository.findItemsByCartId(cartId);
