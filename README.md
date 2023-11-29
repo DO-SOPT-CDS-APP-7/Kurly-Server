@@ -1,5 +1,12 @@
 # Kurly-Server
 
+<br/>
+
+# ✨ API 명세서
+https://dosopt-kurly.store/swagger-ui/index.html
+
+<br/>
+
 # 📍  Git convention
 
 ### ✅ Commit Convention

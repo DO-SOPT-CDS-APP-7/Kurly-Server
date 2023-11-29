@@ -2,7 +2,6 @@ INSERT IGNORE INTO seller(id, name, created_at, updated_at)
 VALUES
     (1, '컬리', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 
-
 INSERT IGNORE INTO category(category_type) values('NOODLES');
 INSERT IGNORE INTO category(category_type) values('VEGETABLES');
 INSERT IGNORE INTO category(category_type) values('FRUITS');
@@ -12,7 +11,6 @@ INSERT IGNORE INTO sub_category(category_id, sub_category_type) values (1, 'SALT
 INSERT IGNORE INTO sub_category(category_id, sub_category_type) values (1, 'FLOUR_POWDER_MIX');
 INSERT IGNORE INTO sub_category(category_id, sub_category_type) values (2, 'SWEET_POTATO_CARROT');
 INSERT IGNORE INTO sub_category(category_id, sub_category_type) values (2, 'BROCOLLI_PAPRIKA_CABBAGE');
-
 
 INSERT IGNORE INTO users(user_id, nickname, address)
 VALUES
@@ -78,6 +76,3 @@ INSERT IGNORE INTO product(id, product_name, price, imageurl, discount_rate, del
 VALUES
     (12, '다른서브카테고리예시', 21200, 'https://insopt-seminar3.s3.ap-northeast-2.amazonaws.com/marketKurly/kurly10.svg',
     5, 'SAME_DAY', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, 4);
-
-
-

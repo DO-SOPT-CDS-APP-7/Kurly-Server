@@ -32,9 +32,8 @@ public class ProductService {
    public List<SimilarProductGetResponse> getRelatedById(Long id, Pageable pageable) {
       Category productCategory = productRepository.findByIdOrElseThrow(id).getSubCategory().getCategory();
       return productRepository
-               .searchByCategory(productCategory, pageable)
+               .searchByCategory(id, productCategory, pageable)
                .stream()
-               .filter(p -> !p.getId().equals(id))
                .map(SimilarProductGetResponse::of)
                .collect(Collectors.toList());
    }
@@ -42,9 +41,8 @@ public class ProductService {
    public List<SimilarProductGetResponse> getRecommendedById(Long id) {
       SubCategory productSubCategory = productRepository.findByIdOrElseThrow(id).getSubCategory();
       return productRepository
-               .searchBySubCategory(productSubCategory)
+               .searchBySubCategory(id, productSubCategory)
                .stream()
-               .filter(p -> !p.getId().equals(id))
                .map(SimilarProductGetResponse::of)
                .collect(Collectors.toList());
    }
