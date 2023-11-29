@@ -10,6 +10,7 @@ import org.dosopt.www.marketkurly.domain.Cart.entity.Cart;
 import java.util.ArrayList;
 import java.util.List;
 
+@Table(name="Users")
 @Entity
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)

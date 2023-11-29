@@ -17,18 +17,19 @@ public class CartItemRepositoryImpl implements CartCustomRepository {
     private final JPAQueryFactory jpaQueryFactory;
 
     @Override
-    public List<CartItemGetResponse> findByCartId(Long cartId) {
+    public List<CartItemGetResponse> findItemsByCartId(Long cartId) {
         return jpaQueryFactory
                 .select(new QCartItemGetResponse(
                         cartItem.product.deliveryType,
                         cartItem.product.productName,
                         cartItem.product.price,
                         cartItem.product.discountRate,
-                        cartItem.product.imageURL, cartItem.count))
+                        cartItem.product.imageURL,
+                        cartItem.count))
                 .from(cartItem)
                 .where(cartItem.cart.id.eq(cartId))
                 .fetch();
-        }
+    }
 
     @Override
     public void deleteAllByCart_Id(Long cartId) {
@@ -37,6 +38,5 @@ public class CartItemRepositoryImpl implements CartCustomRepository {
                 .where(cartItem.cart.id.eq(cartId))
                 .execute();
     }
-
 
 }

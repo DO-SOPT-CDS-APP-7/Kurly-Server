@@ -2,14 +2,10 @@ package org.dosopt.www.marketkurly.domain.Cart.dto.response;
 
 
 import com.querydsl.core.annotations.QueryProjection;
-import com.querydsl.core.types.Projections;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
+import org.dosopt.www.marketkurly.domain.Cart.entity.CartItem;
 import org.dosopt.www.marketkurly.domain.Product.entity.DeliveryType;
-
-import java.util.List;
-
-import static org.dosopt.www.marketkurly.domain.Cart.entity.QCartItem.cartItem;
 
 @Data
 public class CartItemGetResponse {
@@ -25,7 +21,7 @@ public class CartItemGetResponse {
     @Schema(description = "할인율")
     Integer discountRate;
 
-    @Schema(description = "상품 이미지")
+    @Schema(description = "상품 이미지", nullable = true)
     String imageURL;
 
     @Schema(description = "담은 개수")
@@ -41,4 +37,12 @@ public class CartItemGetResponse {
         this.count = count;
     }
 
+    public static CartItemGetResponse of(CartItem cartItem) {
+        return new CartItemGetResponse(cartItem.getProduct().getDeliveryType(),
+                                       cartItem.getProduct().getProductName(),
+                                       cartItem.getProduct().getPrice(),
+                                       cartItem.getProduct().getDiscountRate(),
+                                       cartItem.getProduct().getImageURL(),
+                                       cartItem.getCount());
+    }
 }

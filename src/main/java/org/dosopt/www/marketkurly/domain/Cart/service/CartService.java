@@ -21,14 +21,14 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-@Transactional
 public class CartService {
     private final ProductRepository productRepository;
     private final CartRepository cartRepository;
     private final CartItemRepository cartItemRepository;
     private final UserJpaRepository userJpaRepository;
-    final int freeShippingPrice = 50000;
+    static final int freeShippingPrice = 50000;
 
+    @Transactional
     public Long addCart(CartItemAddRequest cartRequest, Long userId){
         Product product = productRepository.findByIdOrElseThrow(cartRequest.getProductId());
         User user = userJpaRepository.findByIdOrElseThrow(userId);
@@ -51,17 +51,19 @@ public class CartService {
         }
     }
 
+    @Transactional
     public void deleteCartItems(Long cartId){
-        CartItem cartItem = cartItemRepository.findById(cartId).orElseThrow(
-                () -> new CartException(CustomErrorCode.CARTITEM_NOT_FOUND));
+        if(cartItemRepository.findByCartId(cartId) == null)
+                throw new CartException(CustomErrorCode.CARTITEM_NOT_FOUND);
         cartItemRepository.deleteAllByCart_Id(cartId);
     }
-
-    public String getFreeShippingPrice(Long cartId){
+    @Transactional
+    public String getFreeShippingPrice(Long userId){
         int totalPrice = 0;
         int remainPrice = 0;
         //장바구니에 담은 상품이 없는 경우, default 값인 50000원 반환
-        List<CartItemGetResponse> cartItems = cartItemRepository.findByCartId(cartId);
+        Long cartId = cartRepository.findByUserId(userId).getId();
+        List<CartItemGetResponse> cartItems = cartItemRepository.findItemsByCartId(cartId);
 
         for(CartItemGetResponse item:cartItems) {
             totalPrice += item.getCount()*item.getPrice() * (1-item.getDiscountRate()*0.01);
@@ -73,11 +75,12 @@ public class CartService {
     }
 
     /*QueryDsl*/
+    @Transactional
     public List<CartItemGetResponse> findCartItems(Long cartId){
-        CartItem cartItem = cartItemRepository.findById(cartId).orElseThrow(
-                () -> new CartException(CustomErrorCode.CART_NOT_FOUND));
+        if(cartItemRepository.findByCartId(cartId) == null)
+            throw new CartException(CustomErrorCode.CART_NOT_FOUND);
 
-        return cartItemRepository.findByCartId(cartId);
+        return cartItemRepository.findItemsByCartId(cartId);
     }
 
 }
